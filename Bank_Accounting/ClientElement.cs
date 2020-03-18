@@ -25,18 +25,10 @@ namespace Bank_Accounting
 
         private void ClientElementPhys_Load(object sender, EventArgs e)
         {
-
-            Client client = new Client();
-            
-
-
-
             this.dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.MultiSelect = false;
 
-
-                                 
-                  
+                Client client = new Client();
 
                 client.PhysFill();
 

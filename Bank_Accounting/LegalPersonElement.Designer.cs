@@ -28,64 +28,64 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.LegalID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.FullName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.LegalName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.OGRN = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.Address = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.INN = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.KPP = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.OKPO = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.OKVED = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.Additional = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.Phone = new System.Windows.Forms.TextBox();
+            this.Email = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.Catcode = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.PostAddr = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.Director = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.BankName = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.CB_corr = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.Acc = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.BankAddr = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.textBox20 = new System.Windows.Forms.TextBox();
+            this.BIK = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.textBox21 = new System.Windows.Forms.TextBox();
+            this.OKTMO = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
-            this.textBox22 = new System.Windows.Forms.TextBox();
+            this.OKATO = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // LegalID
             // 
-            this.textBox1.Location = new System.Drawing.Point(688, 8);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 0;
+            this.LegalID.Location = new System.Drawing.Point(688, 8);
+            this.LegalID.Name = "LegalID";
+            this.LegalID.Size = new System.Drawing.Size(100, 20);
+            this.LegalID.TabIndex = 0;
             // 
             // label1
             // 
@@ -105,12 +105,12 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Полное наименование:";
             // 
-            // textBox2
+            // FullName
             // 
-            this.textBox2.Location = new System.Drawing.Point(175, 36);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(613, 20);
-            this.textBox2.TabIndex = 3;
+            this.FullName.Location = new System.Drawing.Point(175, 36);
+            this.FullName.Name = "FullName";
+            this.FullName.Size = new System.Drawing.Size(613, 20);
+            this.FullName.TabIndex = 3;
             // 
             // label3
             // 
@@ -121,12 +121,12 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Сокращенное наименование:";
             // 
-            // textBox3
+            // LegalName
             // 
-            this.textBox3.Location = new System.Drawing.Point(175, 73);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(613, 20);
-            this.textBox3.TabIndex = 5;
+            this.LegalName.Location = new System.Drawing.Point(175, 73);
+            this.LegalName.Name = "LegalName";
+            this.LegalName.Size = new System.Drawing.Size(613, 20);
+            this.LegalName.TabIndex = 5;
             // 
             // label4
             // 
@@ -137,12 +137,12 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "ОГРН:";
             // 
-            // textBox4
+            // OGRN
             // 
-            this.textBox4.Location = new System.Drawing.Point(456, 382);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(328, 20);
-            this.textBox4.TabIndex = 7;
+            this.OGRN.Location = new System.Drawing.Point(456, 382);
+            this.OGRN.Name = "OGRN";
+            this.OGRN.Size = new System.Drawing.Size(328, 20);
+            this.OGRN.TabIndex = 7;
             // 
             // label5
             // 
@@ -153,12 +153,12 @@
             this.label5.TabIndex = 8;
             this.label5.Text = "Юридический адрес:";
             // 
-            // textBox5
+            // Address
             // 
-            this.textBox5.Location = new System.Drawing.Point(143, 110);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(645, 20);
-            this.textBox5.TabIndex = 9;
+            this.Address.Location = new System.Drawing.Point(143, 110);
+            this.Address.Name = "Address";
+            this.Address.Size = new System.Drawing.Size(645, 20);
+            this.Address.TabIndex = 9;
             // 
             // label6
             // 
@@ -169,12 +169,12 @@
             this.label6.TabIndex = 10;
             this.label6.Text = "ИНН:";
             // 
-            // textBox6
+            // INN
             // 
-            this.textBox6.Location = new System.Drawing.Point(48, 345);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(300, 20);
-            this.textBox6.TabIndex = 11;
+            this.INN.Location = new System.Drawing.Point(48, 345);
+            this.INN.Name = "INN";
+            this.INN.Size = new System.Drawing.Size(300, 20);
+            this.INN.TabIndex = 11;
             // 
             // label7
             // 
@@ -185,12 +185,12 @@
             this.label7.TabIndex = 12;
             this.label7.Text = "КПП:";
             // 
-            // textBox7
+            // KPP
             // 
-            this.textBox7.Location = new System.Drawing.Point(48, 423);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(300, 20);
-            this.textBox7.TabIndex = 13;
+            this.KPP.Location = new System.Drawing.Point(48, 423);
+            this.KPP.Name = "KPP";
+            this.KPP.Size = new System.Drawing.Size(300, 20);
+            this.KPP.TabIndex = 13;
             // 
             // label8
             // 
@@ -201,12 +201,12 @@
             this.label8.TabIndex = 14;
             this.label8.Text = "ОКПО:";
             // 
-            // textBox8
+            // OKPO
             // 
-            this.textBox8.Location = new System.Drawing.Point(48, 382);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(300, 20);
-            this.textBox8.TabIndex = 15;
+            this.OKPO.Location = new System.Drawing.Point(48, 382);
+            this.OKPO.Name = "OKPO";
+            this.OKPO.Size = new System.Drawing.Size(300, 20);
+            this.OKPO.TabIndex = 15;
             // 
             // label9
             // 
@@ -217,12 +217,12 @@
             this.label9.TabIndex = 16;
             this.label9.Text = "ОКВЭД:";
             // 
-            // textBox9
+            // OKVED
             // 
-            this.textBox9.Location = new System.Drawing.Point(456, 342);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(328, 20);
-            this.textBox9.TabIndex = 17;
+            this.OKVED.Location = new System.Drawing.Point(456, 342);
+            this.OKVED.Name = "OKVED";
+            this.OKVED.Size = new System.Drawing.Size(328, 20);
+            this.OKVED.TabIndex = 17;
             // 
             // label10
             // 
@@ -233,13 +233,13 @@
             this.label10.TabIndex = 18;
             this.label10.Text = "Дополнительная информация:";
             // 
-            // textBox10
+            // Additional
             // 
-            this.textBox10.Location = new System.Drawing.Point(17, 513);
-            this.textBox10.Multiline = true;
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(773, 59);
-            this.textBox10.TabIndex = 19;
+            this.Additional.Location = new System.Drawing.Point(17, 513);
+            this.Additional.Multiline = true;
+            this.Additional.Name = "Additional";
+            this.Additional.Size = new System.Drawing.Size(773, 59);
+            this.Additional.TabIndex = 19;
             // 
             // label11
             // 
@@ -279,19 +279,19 @@
             this.label12.TabIndex = 24;
             this.label12.Text = "Телефон:";
             // 
-            // textBox11
+            // Phone
             // 
-            this.textBox11.Location = new System.Drawing.Point(456, 454);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(330, 20);
-            this.textBox11.TabIndex = 25;
+            this.Phone.Location = new System.Drawing.Point(456, 454);
+            this.Phone.Name = "Phone";
+            this.Phone.Size = new System.Drawing.Size(330, 20);
+            this.Phone.TabIndex = 25;
             // 
-            // textBox12
+            // Email
             // 
-            this.textBox12.Location = new System.Drawing.Point(48, 454);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(300, 20);
-            this.textBox12.TabIndex = 26;
+            this.Email.Location = new System.Drawing.Point(48, 454);
+            this.Email.Name = "Email";
+            this.Email.Size = new System.Drawing.Size(300, 20);
+            this.Email.TabIndex = 26;
             // 
             // label13
             // 
@@ -311,12 +311,12 @@
             this.label14.TabIndex = 28;
             this.label14.Text = "Код категории:";
             // 
-            // textBox13
+            // Catcode
             // 
-            this.textBox13.Location = new System.Drawing.Point(456, 420);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(328, 20);
-            this.textBox13.TabIndex = 29;
+            this.Catcode.Location = new System.Drawing.Point(456, 420);
+            this.Catcode.Name = "Catcode";
+            this.Catcode.Size = new System.Drawing.Size(328, 20);
+            this.Catcode.TabIndex = 29;
             // 
             // button3
             // 
@@ -344,12 +344,12 @@
             this.label15.TabIndex = 32;
             this.label15.Text = "Почтовый адрес:";
             // 
-            // textBox14
+            // PostAddr
             // 
-            this.textBox14.Location = new System.Drawing.Point(143, 136);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(645, 20);
-            this.textBox14.TabIndex = 33;
+            this.PostAddr.Location = new System.Drawing.Point(143, 136);
+            this.PostAddr.Name = "PostAddr";
+            this.PostAddr.Size = new System.Drawing.Size(645, 20);
+            this.PostAddr.TabIndex = 33;
             // 
             // label16
             // 
@@ -360,12 +360,12 @@
             this.label16.TabIndex = 34;
             this.label16.Text = "Генеральный директор:";
             // 
-            // textBox15
+            // Director
             // 
-            this.textBox15.Location = new System.Drawing.Point(175, 192);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(613, 20);
-            this.textBox15.TabIndex = 35;
+            this.Director.Location = new System.Drawing.Point(175, 192);
+            this.Director.Name = "Director";
+            this.Director.Size = new System.Drawing.Size(613, 20);
+            this.Director.TabIndex = 35;
             // 
             // label17
             // 
@@ -376,12 +376,12 @@
             this.label17.TabIndex = 36;
             this.label17.Text = "Наименование банка:";
             // 
-            // textBox16
+            // BankName
             // 
-            this.textBox16.Location = new System.Drawing.Point(175, 239);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(613, 20);
-            this.textBox16.TabIndex = 37;
+            this.BankName.Location = new System.Drawing.Point(175, 239);
+            this.BankName.Name = "BankName";
+            this.BankName.Size = new System.Drawing.Size(613, 20);
+            this.BankName.TabIndex = 37;
             // 
             // label18
             // 
@@ -392,12 +392,12 @@
             this.label18.TabIndex = 38;
             this.label18.Text = "Корреспондентский счет:";
             // 
-            // textBox17
+            // CB_corr
             // 
-            this.textBox17.Location = new System.Drawing.Point(161, 271);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(260, 20);
-            this.textBox17.TabIndex = 39;
+            this.CB_corr.Location = new System.Drawing.Point(161, 271);
+            this.CB_corr.Name = "CB_corr";
+            this.CB_corr.Size = new System.Drawing.Size(260, 20);
+            this.CB_corr.TabIndex = 39;
             // 
             // label19
             // 
@@ -408,12 +408,12 @@
             this.label19.TabIndex = 40;
             this.label19.Text = "Расчетный счет:";
             // 
-            // textBox18
+            // Acc
             // 
-            this.textBox18.Location = new System.Drawing.Point(528, 271);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(260, 20);
-            this.textBox18.TabIndex = 41;
+            this.Acc.Location = new System.Drawing.Point(528, 271);
+            this.Acc.Name = "Acc";
+            this.Acc.Size = new System.Drawing.Size(260, 20);
+            this.Acc.TabIndex = 41;
             // 
             // label20
             // 
@@ -424,12 +424,12 @@
             this.label20.TabIndex = 42;
             this.label20.Text = "Адрес банка:";
             // 
-            // textBox19
+            // BankAddr
             // 
-            this.textBox19.Location = new System.Drawing.Point(143, 302);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(645, 20);
-            this.textBox19.TabIndex = 43;
+            this.BankAddr.Location = new System.Drawing.Point(143, 302);
+            this.BankAddr.Name = "BankAddr";
+            this.BankAddr.Size = new System.Drawing.Size(645, 20);
+            this.BankAddr.TabIndex = 43;
             // 
             // label21
             // 
@@ -440,12 +440,12 @@
             this.label21.TabIndex = 44;
             this.label21.Text = "БИК:";
             // 
-            // textBox20
+            // BIK
             // 
-            this.textBox20.Location = new System.Drawing.Point(52, 166);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(171, 20);
-            this.textBox20.TabIndex = 45;
+            this.BIK.Location = new System.Drawing.Point(52, 166);
+            this.BIK.Name = "BIK";
+            this.BIK.Size = new System.Drawing.Size(171, 20);
+            this.BIK.TabIndex = 45;
             // 
             // label22
             // 
@@ -456,12 +456,12 @@
             this.label22.TabIndex = 46;
             this.label22.Text = "ОКТМО:";
             // 
-            // textBox21
+            // OKTMO
             // 
-            this.textBox21.Location = new System.Drawing.Point(319, 165);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(171, 20);
-            this.textBox21.TabIndex = 47;
+            this.OKTMO.Location = new System.Drawing.Point(319, 165);
+            this.OKTMO.Name = "OKTMO";
+            this.OKTMO.Size = new System.Drawing.Size(171, 20);
+            this.OKTMO.TabIndex = 47;
             // 
             // label23
             // 
@@ -472,69 +472,70 @@
             this.label23.TabIndex = 48;
             this.label23.Text = "ОКАТО:";
             // 
-            // textBox22
+            // OKATO
             // 
-            this.textBox22.Location = new System.Drawing.Point(571, 165);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(171, 20);
-            this.textBox22.TabIndex = 49;
+            this.OKATO.Location = new System.Drawing.Point(571, 165);
+            this.OKATO.Name = "OKATO";
+            this.OKATO.Size = new System.Drawing.Size(171, 20);
+            this.OKATO.TabIndex = 49;
             // 
             // LegalPersonElement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 751);
-            this.Controls.Add(this.textBox22);
+            this.Controls.Add(this.OKATO);
             this.Controls.Add(this.label23);
-            this.Controls.Add(this.textBox21);
+            this.Controls.Add(this.OKTMO);
             this.Controls.Add(this.label22);
-            this.Controls.Add(this.textBox20);
+            this.Controls.Add(this.BIK);
             this.Controls.Add(this.label21);
-            this.Controls.Add(this.textBox19);
+            this.Controls.Add(this.BankAddr);
             this.Controls.Add(this.label20);
-            this.Controls.Add(this.textBox18);
+            this.Controls.Add(this.Acc);
             this.Controls.Add(this.label19);
-            this.Controls.Add(this.textBox17);
+            this.Controls.Add(this.CB_corr);
             this.Controls.Add(this.label18);
-            this.Controls.Add(this.textBox16);
+            this.Controls.Add(this.BankName);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.textBox15);
+            this.Controls.Add(this.Director);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.textBox14);
+            this.Controls.Add(this.PostAddr);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.textBox13);
+            this.Controls.Add(this.Catcode);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.textBox12);
-            this.Controls.Add(this.textBox11);
+            this.Controls.Add(this.Email);
+            this.Controls.Add(this.Phone);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.textBox10);
+            this.Controls.Add(this.Additional);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.OKVED);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.OKPO);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.KPP);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.INN);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.Address);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.OGRN);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.LegalName);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.FullName);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.LegalID);
             this.Name = "LegalPersonElement";
             this.Text = "Карточка клиента";
+            this.Load += new System.EventHandler(this.LegalPersonElement_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -543,54 +544,54 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox LegalID;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox FullName;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox LegalName;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox OGRN;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox Address;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox INN;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox KPP;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox OKPO;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox OKVED;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox Additional;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox Phone;
+        private System.Windows.Forms.TextBox Email;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox Catcode;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox PostAddr;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.TextBox Director;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.TextBox BankName;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBox17;
+        private System.Windows.Forms.TextBox CB_corr;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox textBox18;
+        private System.Windows.Forms.TextBox Acc;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox textBox19;
+        private System.Windows.Forms.TextBox BankAddr;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox textBox20;
+        private System.Windows.Forms.TextBox BIK;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox textBox21;
+        private System.Windows.Forms.TextBox OKTMO;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.TextBox textBox22;
+        private System.Windows.Forms.TextBox OKATO;
     }
 }

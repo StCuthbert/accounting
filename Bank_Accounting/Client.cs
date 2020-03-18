@@ -191,12 +191,12 @@ namespace Bank_Accounting
                         email = reader.GetString(5);
                         additional = reader.GetString(6);
                         address = reader.GetString(7);
-                        nationality = reader.GetString(9);
-                        birth = reader.GetDateTime(10);
-                        document = reader.GetString(11);
-                        serial_num = reader.GetString(12);
-                        date_of_issue = reader.GetDateTime(13);
-                        issuing = reader.GetString(14);
+                        nationality = reader.GetString(10);
+                        birth = reader.GetDateTime(11);
+                        document = reader.GetString(12);
+                        serial_num = reader.GetString(13);
+                        date_of_issue = reader.GetDateTime(14);
+                        issuing = reader.GetString(15);
                         
                         
                                                
@@ -263,12 +263,12 @@ namespace Bank_Accounting
 
 
 
-            string sqltext = "INSERT INTO physclients (id, fullname, okved, okpo, ogrn, okato, oktmo, catcode, central_corr, acc, BIK, bank_name, bank_addr, director, post_addr, client_id )" +
-                 "VALUES(null, @fulllname, @okved, @okpo, @ogrn, @okato, @oktmo, @catcode, @cenral_corr, @acc, @BIK, @bank_name, @bank_addr, @director, @post_addr, @clientID)";
+            string sqltext = "INSERT INTO legalclients (id, fullname, okved, okpo, ogrn, okato, oktmo, code, central_corr, acc, BIK, bank_name, bank_addr, director, post_addr, client_id )" +
+                 "VALUES(null, @fullname, @okved, @okpo, @ogrn, @okato, @oktmo, @catcode, @cenral_corr, @acc, @BIK, @bank_name, @bank_addr, @director, @post_addr, @clientID)";
 
             MySqlCommand comnd = new MySqlCommand(sqltext, conn);
 
-            MySqlParameter fullnameParam = new MySqlParameter("@fulllname", fullname);
+            MySqlParameter fullnameParam = new MySqlParameter("@fullname", fullname);
             MySqlParameter okvedParam = new MySqlParameter("@okved", okved);
             MySqlParameter okpoParam = new MySqlParameter("@okpo", okpo);
             MySqlParameter ogrnParam = new MySqlParameter("@ogrn", ogrn);

@@ -46,12 +46,17 @@ namespace Bank_Accounting
             Client.RowId = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
             Client.ClientType = dataGridView1.CurrentRow.Cells[8].Value.ToString();
 
+
             if (Client.ClientType == "физическое")
             {   
+                
                 ClientElementPhys client = new ClientElementPhys();
                 client.ShowDialog();
+
             }
+
             else
+
             {
                 LegalPersonElement legalcl = new LegalPersonElement();
                 legalcl.ShowDialog();
