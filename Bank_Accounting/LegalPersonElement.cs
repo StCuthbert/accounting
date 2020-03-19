@@ -49,22 +49,52 @@ namespace Bank_Accounting
             clsv.director = Director.Text;
             clsv.post_addr = PostAddr.Text;
 
+
             if (LegalID.Text == "")
+
             {
                 clsv.LegalSave();
             }
+
             else
+
             {
-                /*  Client.FormId = Convert.ToInt32(ClientID.Text);
-                  client.PhyUpdate();
-                  */
+
+                Client.FormId = Convert.ToInt32(LegalID.Text);
+                clsv.LegalUpdate();
+                  
             }
         }
 
         private void LegalPersonElement_Load(object sender, EventArgs e)
         {
-            Client client = new Client();
-            client.LegalFill();
+            Client clsv = new Client();
+            clsv.LegalFill();
+
+            LegalID.Text = clsv._userID;
+            LegalName.Text = clsv.name;
+            INN.Text = clsv.INN;
+            KPP.Text = clsv.KPP;
+            Phone.Text = clsv.phone_num;
+            Email.Text = clsv.email;
+            Additional.Text = clsv.additional;
+            Address.Text = clsv.address;
+            FullName.Text = clsv.fullname;
+            OKVED.Text = clsv.okved;
+            OKPO.Text = clsv.okpo;
+            OGRN.Text = clsv.ogrn;
+            OKATO.Text = clsv.okato;
+            OKTMO.Text = clsv.oktmo;
+            Catcode.Text = clsv.catcode;
+            CB_corr.Text = clsv.cenral_corr;
+            Acc.Text = clsv.acc;
+            BIK.Text = clsv.BIK;
+            BankName.Text = clsv.bank_name;
+            BankAddr.Text = clsv.bank_addr;
+            Director.Text = clsv.director;
+            PostAddr.Text = clsv.post_addr;
+
+
         }
     }
 }

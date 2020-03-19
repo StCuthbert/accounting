@@ -94,9 +94,9 @@ namespace Bank_Accounting
             }
             else
             {
-              /*  Client.FormId = Convert.ToInt32(ClientID.Text);
-                client.PhyUpdate();
-                */
+                Client.FormId = Convert.ToInt32(ClientID.Text);
+                client.PhysUpdate();
+               
             }
         }
     }
