@@ -81,5 +81,12 @@ namespace Bank_Accounting
             choice.ShowDialog();
            
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Client.RowId = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            Client client = new Client();
+            client.ClientDel();
+        }
     }
 }

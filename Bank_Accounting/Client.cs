@@ -219,6 +219,21 @@ namespace Bank_Accounting
             conn.Close();
             RowId = 0;
         }
+
+
+        //Удаление записей
+        public void ClientDel()
+        {
+            MySqlConnection conn = DBUtils.GetDBConnection();
+            conn.Open();
+            string sql = "DELETE FROM clients WHERE id= @RowID";
+            MySqlCommand cmd = new MySqlCommand(sql, conn);
+            MySqlParameter rowidParam = new MySqlParameter("@RowID", RowId);
+            cmd.Parameters.Add(rowidParam);
+            cmd.ExecuteReader();
+            conn.Close();
+            RowId = 0;
+        }
         
 
 
