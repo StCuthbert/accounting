@@ -62,13 +62,15 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.accountsBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.basereforgedDataSet3 = new Bank_Accounting.basereforgedDataSet3();
             this.accountsBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.bankbaseDataSetCLAccBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bankbaseDataSetCLAcc = new Bank_Accounting.bankbaseDataSetCLAcc();
@@ -83,10 +85,16 @@
             this.accountsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.accountsTableAdapter = new Bank_Accounting.bankbaseDataSetCLAccTableAdapters.accountsTableAdapter();
             this.accountsBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.accountsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label14 = new System.Windows.Forms.Label();
             this.PhysNation = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.accountsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.basereforgedDataSet = new Bank_Accounting.basereforgedDataSet();
+            this.basereforgedDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.accountsTableAdapter1 = new Bank_Accounting.basereforgedDataSet3TableAdapters.accountsTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.basereforgedDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bankbaseDataSetCLAccBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bankbaseDataSetCLAcc)).BeginInit();
@@ -99,6 +107,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.basereforgedDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.basereforgedDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // Physname
@@ -272,16 +282,16 @@
             // 
             // AdditionalInfo
             // 
-            this.AdditionalInfo.Location = new System.Drawing.Point(14, 410);
+            this.AdditionalInfo.Location = new System.Drawing.Point(15, 394);
             this.AdditionalInfo.Multiline = true;
             this.AdditionalInfo.Name = "AdditionalInfo";
-            this.AdditionalInfo.Size = new System.Drawing.Size(773, 55);
+            this.AdditionalInfo.Size = new System.Drawing.Size(773, 46);
             this.AdditionalInfo.TabIndex = 23;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(12, 468);
+            this.label11.Location = new System.Drawing.Point(13, 479);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(39, 13);
             this.label11.TabIndex = 24;
@@ -357,18 +367,18 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
             this.clientDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.accountsBindingSource2;
-            this.dataGridView1.Location = new System.Drawing.Point(16, 484);
+            this.dataGridView1.DataSource = this.accountsBindingSource4;
+            this.dataGridView1.Location = new System.Drawing.Point(16, 495);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(772, 103);
+            this.dataGridView1.Size = new System.Drawing.Size(772, 92);
             this.dataGridView1.TabIndex = 33;
             // 
             // dataGridViewTextBoxColumn1
@@ -381,58 +391,68 @@
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.DataPropertyName = "acc_number";
-            this.dataGridViewTextBoxColumn2.HeaderText = "acc_number";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Номер счета";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "bank_name";
-            this.dataGridViewTextBoxColumn3.HeaderText = "bank_name";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "BIK";
-            this.dataGridViewTextBoxColumn4.HeaderText = "BIK";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "centralbank_corr";
-            this.dataGridViewTextBoxColumn5.HeaderText = "centralbank_corr";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn6
             // 
             this.dataGridViewTextBoxColumn6.DataPropertyName = "kind";
-            this.dataGridViewTextBoxColumn6.HeaderText = "kind";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Вид";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn7
             // 
             this.dataGridViewTextBoxColumn7.DataPropertyName = "currency";
-            this.dataGridViewTextBoxColumn7.HeaderText = "currency";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Валюта";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             this.dataGridViewTextBoxColumn7.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn8
             // 
             this.dataGridViewTextBoxColumn8.DataPropertyName = "balance";
-            this.dataGridViewTextBoxColumn8.HeaderText = "balance";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Баланс";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "bank_name";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Банк";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "BIK";
+            this.dataGridViewTextBoxColumn4.HeaderText = "БИК";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "centralbank_corr";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Корреспондентский счет";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
             // clientDataGridViewTextBoxColumn
             // 
             this.clientDataGridViewTextBoxColumn.DataPropertyName = "client";
-            this.clientDataGridViewTextBoxColumn.HeaderText = "client";
+            this.clientDataGridViewTextBoxColumn.HeaderText = "Клиент";
             this.clientDataGridViewTextBoxColumn.Name = "clientDataGridViewTextBoxColumn";
             this.clientDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // accountsBindingSource4
+            // 
+            this.accountsBindingSource4.DataMember = "accounts";
+            this.accountsBindingSource4.DataSource = this.basereforgedDataSet3;
+            // 
+            // basereforgedDataSet3
+            // 
+            this.basereforgedDataSet3.DataSetName = "basereforgedDataSet3";
+            this.basereforgedDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // accountsBindingSource2
             // 
@@ -501,10 +521,6 @@
             this.accountsBindingSource3.DataMember = "accounts";
             this.accountsBindingSource3.DataSource = this.bankbaseDataSetCLAccBindingSource;
             // 
-            // accountsBindingSource
-            // 
-            this.accountsBindingSource.DataMember = "accounts";
-            // 
             // label14
             // 
             this.label14.AutoSize = true;
@@ -521,11 +537,40 @@
             this.PhysNation.Size = new System.Drawing.Size(190, 20);
             this.PhysNation.TabIndex = 35;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(713, 466);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 36;
+            this.button2.Text = "Добавить";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
+            // accountsBindingSource
+            // 
+            this.accountsBindingSource.DataMember = "accounts";
+            // 
+            // basereforgedDataSet
+            // 
+            this.basereforgedDataSet.DataSetName = "basereforgedDataSet";
+            this.basereforgedDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // basereforgedDataSetBindingSource
+            // 
+            this.basereforgedDataSetBindingSource.DataSource = this.basereforgedDataSet;
+            this.basereforgedDataSetBindingSource.Position = 0;
+            // 
+            // accountsTableAdapter1
+            // 
+            this.accountsTableAdapter1.ClearBeforeFill = true;
+            // 
             // ClientElementPhys
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(808, 628);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.PhysNation);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.dataGridView1);
@@ -563,6 +608,8 @@
             this.Text = "Карточка клиента";
             this.Load += new System.EventHandler(this.ClientElementPhys_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.basereforgedDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bankbaseDataSetCLAccBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bankbaseDataSetCLAcc)).EndInit();
@@ -575,6 +622,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.basereforgedDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.basereforgedDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -636,17 +685,23 @@
         private bankbaseDataSetCLAccTableAdapters.accountsTableAdapter accountsTableAdapter;
         private System.Windows.Forms.BindingSource bankbaseDataSetCLAccBindingSource;
         private System.Windows.Forms.BindingSource accountsBindingSource2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clientDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource accountsBindingSource3;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox PhysNation;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.BindingSource basereforgedDataSetBindingSource;
+        private basereforgedDataSet basereforgedDataSet;
+        private basereforgedDataSet3 basereforgedDataSet3;
+        private System.Windows.Forms.BindingSource accountsBindingSource4;
+        private basereforgedDataSet3TableAdapters.accountsTableAdapter accountsTableAdapter1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clientDataGridViewTextBoxColumn;
     }
 }

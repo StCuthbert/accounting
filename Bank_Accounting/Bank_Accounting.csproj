@@ -103,6 +103,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>basereforgedDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="basereforgedDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>basereforgedDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="basereforgedDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>basereforgedDataSet4.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Calculations.cs" />
     <Compile Include="ClientChoice.cs">
       <SubType>Form</SubType>
@@ -152,6 +162,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Client.cs" />
+    <EmbeddedResource Include="AccountElement.resx">
+      <DependentUpon>AccountElement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AccountList.resx">
       <DependentUpon>AccountList.cs</DependentUpon>
     </EmbeddedResource>
@@ -269,6 +282,28 @@
     </None>
     <None Include="basereforgedDataSet2.xss">
       <DependentUpon>basereforgedDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="basereforgedDataSet3.xsc">
+      <DependentUpon>basereforgedDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="basereforgedDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>basereforgedDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="basereforgedDataSet3.xss">
+      <DependentUpon>basereforgedDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="basereforgedDataSet4.xsc">
+      <DependentUpon>basereforgedDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="basereforgedDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>basereforgedDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="basereforgedDataSet4.xss">
+      <DependentUpon>basereforgedDataSet4.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

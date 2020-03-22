@@ -25,6 +25,8 @@ namespace Bank_Accounting
 
         private void ClientElementPhys_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "basereforgedDataSet3.accounts". При необходимости она может быть перемещена или удалена.
+            this.accountsTableAdapter1.Fill(this.basereforgedDataSet3.accounts);
             this.dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.MultiSelect = false;
 
@@ -47,11 +49,12 @@ namespace Bank_Accounting
                 RegAddr.Text = client.address;
                 AdditionalInfo.Text = client.additional;
 
-              /*  this.accountsBindingSource2.Filter = "client=" + client._userID;
+                
+                 
+                this.accountsBindingSource4.Filter = "client=" + client._userID;
                 this.accountsTableAdapter.Fill(dataTable: this.bankbaseDataSetCLAcc.accounts);
-
-          
-            */
+                          
+              
 
         }
 
@@ -98,6 +101,14 @@ namespace Bank_Accounting
                 client.PhysUpdate();
                
             }
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            Account.ClientID = Convert.ToInt32(ClientID.Text);
+            Account.ClientName = Physname.Text;
+            AccountElement accel = new AccountElement();
+            accel.ShowDialog();
         }
     }
 }

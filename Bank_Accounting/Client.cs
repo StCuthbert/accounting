@@ -51,6 +51,7 @@ namespace Bank_Accounting
 
         static public int RowId;
         static public int FormId;
+        
         static public string ClientType;
         string clientID;
    

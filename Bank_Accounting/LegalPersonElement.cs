@@ -68,6 +68,13 @@ namespace Bank_Accounting
 
         private void LegalPersonElement_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "basereforgedDataSet4.accounts". При необходимости она может быть перемещена или удалена.
+            this.accountsTableAdapter.Fill(this.basereforgedDataSet4.accounts);
+            this.dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.MultiSelect = false;
+
+           
+
             Client clsv = new Client();
             clsv.LegalFill();
 
@@ -94,7 +101,18 @@ namespace Bank_Accounting
             Director.Text = clsv.director;
             PostAddr.Text = clsv.post_addr;
 
+            this.accountsBindingSource.Filter = "client=" + clsv._userID;
+            this.accountsTableAdapter.Fill(dataTable: this.basereforgedDataSet4.accounts);
 
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Account.ClientID = Convert.ToInt32(LegalID.Text);
+            Account.ClientName = LegalName.Text;
+            AccountElement accel = new AccountElement();
+            accel.ShowDialog();
         }
     }
 }
