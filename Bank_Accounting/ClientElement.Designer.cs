@@ -92,6 +92,7 @@
             this.basereforgedDataSet = new Bank_Accounting.basereforgedDataSet();
             this.basereforgedDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.accountsTableAdapter1 = new Bank_Accounting.basereforgedDataSet3TableAdapters.accountsTableAdapter();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.basereforgedDataSet3)).BeginInit();
@@ -539,7 +540,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(713, 466);
+            this.button2.Location = new System.Drawing.Point(631, 466);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 36;
@@ -565,11 +566,22 @@
             // 
             this.accountsTableAdapter1.ClearBeforeFill = true;
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(712, 466);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 37;
+            this.button4.Text = "Удалить";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // ClientElementPhys
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(808, 628);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.PhysNation);
             this.Controls.Add(this.label14);
@@ -703,5 +715,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn clientDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button button4;
     }
 }

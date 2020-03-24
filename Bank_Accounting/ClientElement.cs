@@ -101,6 +101,8 @@ namespace Bank_Accounting
                 client.PhysUpdate();
                
             }
+
+           
         }
 
         private void button2_Click_1(object sender, EventArgs e)
@@ -109,6 +111,17 @@ namespace Bank_Accounting
             Account.ClientName = Physname.Text;
             AccountElement accel = new AccountElement();
             accel.ShowDialog();
+            this.accountsTableAdapter1.Fill(this.basereforgedDataSet3.accounts);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+           Account.AccRow = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+           Account acnt = new Account();
+           acnt.AccDelete();
+           this.accountsTableAdapter1.Fill(this.basereforgedDataSet3.accounts);
+
+
         }
     }
 }

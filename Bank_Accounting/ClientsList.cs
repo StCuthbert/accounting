@@ -27,14 +27,12 @@ namespace Bank_Accounting
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "basereforgedDataSet2.clients". При необходимости она может быть перемещена или удалена.
             this.clientsTableAdapter4.Fill(this.basereforgedDataSet2.clients);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "basereforgedDataSet1.clients". При необходимости она может быть перемещена или удалена.
-            this.clientsTableAdapter3.Fill(this.basereforgedDataSet1.clients);
+           
 
 
             this.dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.MultiSelect = false;
             
-           
             
 
             
@@ -62,6 +60,9 @@ namespace Bank_Accounting
                 legalcl.ShowDialog();
             }
 
+            this.clientsTableAdapter4.Fill(this.basereforgedDataSet2.clients);
+
+
         }
 
         
@@ -87,6 +88,13 @@ namespace Bank_Accounting
             Client.RowId = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
             Client client = new Client();
             client.ClientDel();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            
+            this.clientsTableAdapter4.Fill(this.basereforgedDataSet2.clients);
+           
         }
     }
 }

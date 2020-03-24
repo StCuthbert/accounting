@@ -113,6 +113,15 @@ namespace Bank_Accounting
             Account.ClientName = LegalName.Text;
             AccountElement accel = new AccountElement();
             accel.ShowDialog();
+            this.accountsTableAdapter.Fill(this.basereforgedDataSet4.accounts);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Account.AccRow = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            Account acnt = new Account();
+            acnt.AccDelete();
+            this.accountsTableAdapter.Fill(this.basereforgedDataSet4.accounts);
         }
     }
 }

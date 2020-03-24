@@ -11,6 +11,7 @@ namespace Bank_Accounting
     {
         static public string ClientName;
         static public int ClientID;
+        static public int AccRow;
 
         public string id;
         //Номер счета 20 знаков
@@ -60,6 +61,24 @@ namespace Bank_Accounting
             cmd.ExecuteReader();
             conn.Close();
            
+        }
+
+        public void AccDelete()
+        {
+            MySqlConnection conn = DBUtils.GetDBConnection();
+            conn.Open();
+
+            string sql = "DELETE from accounts where id=@Accrow";
+            MySqlCommand cmd = new MySqlCommand(sql, conn);
+
+            //Параметры
+            MySqlParameter accrowParam = new MySqlParameter("@AccRow", AccRow);
+            
+
+            cmd.Parameters.Add(accrowParam);
+            
+            cmd.ExecuteReader();
+            conn.Close();
         }
     }
     

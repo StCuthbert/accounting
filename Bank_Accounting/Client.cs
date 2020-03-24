@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.Common;
 using MySql.Data.MySqlClient;
 using System.Windows.Forms;
+using System.Data;
 
 namespace Bank_Accounting
 {
@@ -58,6 +59,17 @@ namespace Bank_Accounting
 
         
         // Обновление информации физ. лица
+
+        public DataTable ClientListFill()
+        {
+            MySqlConnection conn = DBUtils.GetDBConnection();
+            conn.Open();
+            string sql = "SELECT * FROM clients";
+            MySqlCommand cmd = new MySqlCommand(sql, conn);
+            var dt = new DataTable();
+            new MySqlDataAdapter(cmd).Fill(dt);
+            return dt;
+        }
         
         public void PhysUpdate()
         {

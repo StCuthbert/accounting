@@ -60,6 +60,17 @@
             this.Catcode = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.accnumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kindDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.currencyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.balanceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.banknameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bIKDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.centralbankcorrDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.accountsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.basereforgedDataSet4 = new Bank_Accounting.basereforgedDataSet4();
             this.label15 = new System.Windows.Forms.Label();
             this.PostAddr = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
@@ -79,21 +90,11 @@
             this.label23 = new System.Windows.Forms.Label();
             this.OKATO = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
-            this.basereforgedDataSet4 = new Bank_Accounting.basereforgedDataSet4();
-            this.accountsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.accountsTableAdapter = new Bank_Accounting.basereforgedDataSet4TableAdapters.accountsTableAdapter();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.accnumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kindDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.currencyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.balanceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.banknameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bIKDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.centralbankcorrDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.basereforgedDataSet4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.basereforgedDataSet4)).BeginInit();
             this.SuspendLayout();
             // 
             // LegalID
@@ -363,6 +364,70 @@
             this.dataGridView1.Size = new System.Drawing.Size(773, 109);
             this.dataGridView1.TabIndex = 31;
             // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            // 
+            // accnumberDataGridViewTextBoxColumn
+            // 
+            this.accnumberDataGridViewTextBoxColumn.DataPropertyName = "acc_number";
+            this.accnumberDataGridViewTextBoxColumn.HeaderText = "Номер счета";
+            this.accnumberDataGridViewTextBoxColumn.Name = "accnumberDataGridViewTextBoxColumn";
+            // 
+            // kindDataGridViewTextBoxColumn
+            // 
+            this.kindDataGridViewTextBoxColumn.DataPropertyName = "kind";
+            this.kindDataGridViewTextBoxColumn.HeaderText = "Вид";
+            this.kindDataGridViewTextBoxColumn.Name = "kindDataGridViewTextBoxColumn";
+            // 
+            // currencyDataGridViewTextBoxColumn
+            // 
+            this.currencyDataGridViewTextBoxColumn.DataPropertyName = "currency";
+            this.currencyDataGridViewTextBoxColumn.HeaderText = "Валюта";
+            this.currencyDataGridViewTextBoxColumn.Name = "currencyDataGridViewTextBoxColumn";
+            // 
+            // balanceDataGridViewTextBoxColumn
+            // 
+            this.balanceDataGridViewTextBoxColumn.DataPropertyName = "balance";
+            this.balanceDataGridViewTextBoxColumn.HeaderText = "Баланс";
+            this.balanceDataGridViewTextBoxColumn.Name = "balanceDataGridViewTextBoxColumn";
+            // 
+            // banknameDataGridViewTextBoxColumn
+            // 
+            this.banknameDataGridViewTextBoxColumn.DataPropertyName = "bank_name";
+            this.banknameDataGridViewTextBoxColumn.HeaderText = "Банк";
+            this.banknameDataGridViewTextBoxColumn.Name = "banknameDataGridViewTextBoxColumn";
+            // 
+            // bIKDataGridViewTextBoxColumn
+            // 
+            this.bIKDataGridViewTextBoxColumn.DataPropertyName = "BIK";
+            this.bIKDataGridViewTextBoxColumn.HeaderText = "БИК";
+            this.bIKDataGridViewTextBoxColumn.Name = "bIKDataGridViewTextBoxColumn";
+            // 
+            // centralbankcorrDataGridViewTextBoxColumn
+            // 
+            this.centralbankcorrDataGridViewTextBoxColumn.DataPropertyName = "centralbank_corr";
+            this.centralbankcorrDataGridViewTextBoxColumn.HeaderText = "Корреспондентский счет";
+            this.centralbankcorrDataGridViewTextBoxColumn.Name = "centralbankcorrDataGridViewTextBoxColumn";
+            // 
+            // clientDataGridViewTextBoxColumn
+            // 
+            this.clientDataGridViewTextBoxColumn.DataPropertyName = "client";
+            this.clientDataGridViewTextBoxColumn.HeaderText = "Клиент";
+            this.clientDataGridViewTextBoxColumn.Name = "clientDataGridViewTextBoxColumn";
+            // 
+            // accountsBindingSource
+            // 
+            this.accountsBindingSource.DataMember = "accounts";
+            this.accountsBindingSource.DataSource = this.basereforgedDataSet4;
+            // 
+            // basereforgedDataSet4
+            // 
+            this.basereforgedDataSet4.DataSetName = "basereforgedDataSet4";
+            this.basereforgedDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // label15
             // 
             this.label15.AutoSize = true;
@@ -509,7 +574,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(715, 572);
+            this.button4.Location = new System.Drawing.Point(632, 572);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 50;
@@ -517,79 +582,26 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // basereforgedDataSet4
-            // 
-            this.basereforgedDataSet4.DataSetName = "basereforgedDataSet4";
-            this.basereforgedDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // accountsBindingSource
-            // 
-            this.accountsBindingSource.DataMember = "accounts";
-            this.accountsBindingSource.DataSource = this.basereforgedDataSet4;
-            // 
             // accountsTableAdapter
             // 
             this.accountsTableAdapter.ClearBeforeFill = true;
             // 
-            // idDataGridViewTextBoxColumn
+            // button5
             // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            // 
-            // accnumberDataGridViewTextBoxColumn
-            // 
-            this.accnumberDataGridViewTextBoxColumn.DataPropertyName = "acc_number";
-            this.accnumberDataGridViewTextBoxColumn.HeaderText = "Номер счета";
-            this.accnumberDataGridViewTextBoxColumn.Name = "accnumberDataGridViewTextBoxColumn";
-            // 
-            // kindDataGridViewTextBoxColumn
-            // 
-            this.kindDataGridViewTextBoxColumn.DataPropertyName = "kind";
-            this.kindDataGridViewTextBoxColumn.HeaderText = "Вид";
-            this.kindDataGridViewTextBoxColumn.Name = "kindDataGridViewTextBoxColumn";
-            // 
-            // currencyDataGridViewTextBoxColumn
-            // 
-            this.currencyDataGridViewTextBoxColumn.DataPropertyName = "currency";
-            this.currencyDataGridViewTextBoxColumn.HeaderText = "Валюта";
-            this.currencyDataGridViewTextBoxColumn.Name = "currencyDataGridViewTextBoxColumn";
-            // 
-            // balanceDataGridViewTextBoxColumn
-            // 
-            this.balanceDataGridViewTextBoxColumn.DataPropertyName = "balance";
-            this.balanceDataGridViewTextBoxColumn.HeaderText = "Баланс";
-            this.balanceDataGridViewTextBoxColumn.Name = "balanceDataGridViewTextBoxColumn";
-            // 
-            // banknameDataGridViewTextBoxColumn
-            // 
-            this.banknameDataGridViewTextBoxColumn.DataPropertyName = "bank_name";
-            this.banknameDataGridViewTextBoxColumn.HeaderText = "Банк";
-            this.banknameDataGridViewTextBoxColumn.Name = "banknameDataGridViewTextBoxColumn";
-            // 
-            // bIKDataGridViewTextBoxColumn
-            // 
-            this.bIKDataGridViewTextBoxColumn.DataPropertyName = "BIK";
-            this.bIKDataGridViewTextBoxColumn.HeaderText = "БИК";
-            this.bIKDataGridViewTextBoxColumn.Name = "bIKDataGridViewTextBoxColumn";
-            // 
-            // centralbankcorrDataGridViewTextBoxColumn
-            // 
-            this.centralbankcorrDataGridViewTextBoxColumn.DataPropertyName = "centralbank_corr";
-            this.centralbankcorrDataGridViewTextBoxColumn.HeaderText = "Корреспондентский счет";
-            this.centralbankcorrDataGridViewTextBoxColumn.Name = "centralbankcorrDataGridViewTextBoxColumn";
-            // 
-            // clientDataGridViewTextBoxColumn
-            // 
-            this.clientDataGridViewTextBoxColumn.DataPropertyName = "client";
-            this.clientDataGridViewTextBoxColumn.HeaderText = "Клиент";
-            this.clientDataGridViewTextBoxColumn.Name = "clientDataGridViewTextBoxColumn";
+            this.button5.Location = new System.Drawing.Point(713, 572);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 51;
+            this.button5.Text = "Удалить";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // LegalPersonElement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 751);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.OKATO);
             this.Controls.Add(this.label23);
@@ -644,8 +656,8 @@
             this.Text = "Карточка клиента";
             this.Load += new System.EventHandler(this.LegalPersonElement_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.basereforgedDataSet4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.basereforgedDataSet4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -715,5 +727,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn bIKDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn centralbankcorrDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn clientDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button button5;
     }
 }
