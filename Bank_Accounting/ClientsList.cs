@@ -12,10 +12,12 @@ namespace Bank_Accounting
 {
     public partial class ClientsList : Form
     {
+        private DataTable data;
+        private DataView view;
         public ClientsList()
         {
             InitializeComponent();
-           // this.listClient.DataSource
+            Build();
         }
 
         private void listClient_SelectedIndexChanged(object sender, EventArgs e)
@@ -24,9 +26,8 @@ namespace Bank_Accounting
         }
 
         private void ClientsList_Load(object sender, EventArgs e)
-        {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "basereforgedDataSet2.clients". При необходимости она может быть перемещена или удалена.
-            this.clientsTableAdapter4.Fill(this.basereforgedDataSet2.clients);
+        { 
+
            
 
 
@@ -37,6 +38,27 @@ namespace Bank_Accounting
 
             
 
+        }
+
+        private void Build()
+        {
+            
+            if (data == null)
+            {
+                data = new Client().ClientListFill();
+                view = new DataView(data);
+            }
+
+            //build row filter
+            var nameFilter = CLNameFilter.Text;
+            if (string.IsNullOrEmpty(nameFilter))
+                view.RowFilter = "";
+            else
+                view.RowFilter = string.Format("Name LIKE '%{0}%'", nameFilter);
+
+            //populate data to DGV
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = view;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -95,6 +117,11 @@ namespace Bank_Accounting
             
             this.clientsTableAdapter4.Fill(this.basereforgedDataSet2.clients);
            
+        }
+
+        private void CLNameFilter_TextChanged(object sender, EventArgs e)
+        {
+            Build();
         }
     }
 }

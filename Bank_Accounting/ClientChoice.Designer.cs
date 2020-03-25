@@ -98,6 +98,7 @@
             this.Controls.Add(this.label1);
             this.Name = "ClientChoice";
             this.Text = "ClientChoice";
+            this.Load += new System.EventHandler(this.ClientChoice_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -38,5 +38,11 @@ namespace Bank_Accounting
         {
            
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            OperationsList oplist = new OperationsList();
+            oplist.ShowDialog();
+        }
     }
 }

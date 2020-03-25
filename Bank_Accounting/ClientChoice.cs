@@ -43,5 +43,10 @@ namespace Bank_Accounting
 
             
         }
+
+        private void ClientChoice_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
