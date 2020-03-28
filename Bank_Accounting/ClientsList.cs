@@ -82,8 +82,8 @@ namespace Bank_Accounting
                 legalcl.ShowDialog();
             }
 
-            this.clientsTableAdapter4.Fill(this.basereforgedDataSet2.clients);
-
+            this.clientsTableAdapter4.Fill(data);
+            
 
         }
 
@@ -102,6 +102,7 @@ namespace Bank_Accounting
         {
             ClientChoice choice = new ClientChoice();
             choice.ShowDialog();
+            this.clientsTableAdapter4.Fill(this.basereforgedDataSet2.clients);
            
         }
 

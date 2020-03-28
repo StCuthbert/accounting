@@ -111,6 +111,7 @@
             this.Controls.Add(this.radioButton1);
             this.Name = "OperationChoice";
             this.Text = "OperationChoice";
+            this.Load += new System.EventHandler(this.OperationChoice_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -346,6 +346,8 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -361,6 +363,7 @@
             this.dataGridView1.DataSource = this.accountsBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(17, 601);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(773, 109);
             this.dataGridView1.TabIndex = 31;
             // 
@@ -369,54 +372,63 @@
             this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
             this.idDataGridViewTextBoxColumn.HeaderText = "id";
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // accnumberDataGridViewTextBoxColumn
             // 
             this.accnumberDataGridViewTextBoxColumn.DataPropertyName = "acc_number";
             this.accnumberDataGridViewTextBoxColumn.HeaderText = "Номер счета";
             this.accnumberDataGridViewTextBoxColumn.Name = "accnumberDataGridViewTextBoxColumn";
+            this.accnumberDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // kindDataGridViewTextBoxColumn
             // 
             this.kindDataGridViewTextBoxColumn.DataPropertyName = "kind";
             this.kindDataGridViewTextBoxColumn.HeaderText = "Вид";
             this.kindDataGridViewTextBoxColumn.Name = "kindDataGridViewTextBoxColumn";
+            this.kindDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // currencyDataGridViewTextBoxColumn
             // 
             this.currencyDataGridViewTextBoxColumn.DataPropertyName = "currency";
             this.currencyDataGridViewTextBoxColumn.HeaderText = "Валюта";
             this.currencyDataGridViewTextBoxColumn.Name = "currencyDataGridViewTextBoxColumn";
+            this.currencyDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // balanceDataGridViewTextBoxColumn
             // 
             this.balanceDataGridViewTextBoxColumn.DataPropertyName = "balance";
             this.balanceDataGridViewTextBoxColumn.HeaderText = "Баланс";
             this.balanceDataGridViewTextBoxColumn.Name = "balanceDataGridViewTextBoxColumn";
+            this.balanceDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // banknameDataGridViewTextBoxColumn
             // 
             this.banknameDataGridViewTextBoxColumn.DataPropertyName = "bank_name";
             this.banknameDataGridViewTextBoxColumn.HeaderText = "Банк";
             this.banknameDataGridViewTextBoxColumn.Name = "banknameDataGridViewTextBoxColumn";
+            this.banknameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // bIKDataGridViewTextBoxColumn
             // 
             this.bIKDataGridViewTextBoxColumn.DataPropertyName = "BIK";
             this.bIKDataGridViewTextBoxColumn.HeaderText = "БИК";
             this.bIKDataGridViewTextBoxColumn.Name = "bIKDataGridViewTextBoxColumn";
+            this.bIKDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // centralbankcorrDataGridViewTextBoxColumn
             // 
             this.centralbankcorrDataGridViewTextBoxColumn.DataPropertyName = "centralbank_corr";
             this.centralbankcorrDataGridViewTextBoxColumn.HeaderText = "Корреспондентский счет";
             this.centralbankcorrDataGridViewTextBoxColumn.Name = "centralbankcorrDataGridViewTextBoxColumn";
+            this.centralbankcorrDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // clientDataGridViewTextBoxColumn
             // 
             this.clientDataGridViewTextBoxColumn.DataPropertyName = "client";
             this.clientDataGridViewTextBoxColumn.HeaderText = "Клиент";
             this.clientDataGridViewTextBoxColumn.Name = "clientDataGridViewTextBoxColumn";
+            this.clientDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // accountsBindingSource
             // 
