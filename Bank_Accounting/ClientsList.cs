@@ -82,7 +82,7 @@ namespace Bank_Accounting
                 legalcl.ShowDialog();
             }
 
-            this.clientsTableAdapter4.Fill(data);
+           
             
 
         }

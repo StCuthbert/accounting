@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
+using System.Data;
 
 namespace Bank_Accounting
 {
@@ -79,6 +80,17 @@ namespace Bank_Accounting
             
             cmd.ExecuteReader();
             conn.Close();
+        }
+
+        public DataTable AccountListFill()
+        {
+            MySqlConnection conn = DBUtils.GetDBConnection();
+            conn.Open();
+            string sql = "SELECT * FROM accounts";
+            MySqlCommand cmd = new MySqlCommand(sql, conn);
+            var dt = new DataTable();
+            new MySqlDataAdapter(cmd).Fill(dt);
+            return dt;
         }
     }
     

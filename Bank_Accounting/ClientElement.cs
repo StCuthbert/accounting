@@ -13,9 +13,26 @@ namespace Bank_Accounting
 {
     public partial class ClientElementPhys : Form
     {
+        private DataTable data;
+        private DataView view;
+
         public ClientElementPhys()
         {
             InitializeComponent();
+            Build();
+        }
+
+        private void Build()
+        {
+
+            if (data == null)
+            {
+                data = new Account().AccountListFill();
+                view = new DataView(data);
+            }
+
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = view;
         }
 
         private void Surname_TextChanged(object sender, EventArgs e)
@@ -25,8 +42,7 @@ namespace Bank_Accounting
 
         private void ClientElementPhys_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "basereforgedDataSet3.accounts". При необходимости она может быть перемещена или удалена.
-            this.accountsTableAdapter1.Fill(this.basereforgedDataSet3.accounts);
+           
             this.dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.MultiSelect = false;
 

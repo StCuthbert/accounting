@@ -10,11 +10,29 @@ using System.Windows.Forms;
 
 namespace Bank_Accounting
 {
+
     public partial class LegalPersonElement : Form
     {
+        private DataTable data;
+        private DataView view;
+
         public LegalPersonElement()
         {
             InitializeComponent();
+            Build();
+        }
+
+        private void Build()
+        {
+
+            if (data == null)
+            {
+                data = new Account().AccountListFill();
+                view = new DataView(data);
+            }
+
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = view;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -68,8 +86,7 @@ namespace Bank_Accounting
 
         private void LegalPersonElement_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "basereforgedDataSet4.accounts". При необходимости она может быть перемещена или удалена.
-            this.accountsTableAdapter.Fill(this.basereforgedDataSet4.accounts);
+           
             this.dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.MultiSelect = false;
 
@@ -101,8 +118,7 @@ namespace Bank_Accounting
             Director.Text = clsv.director;
             PostAddr.Text = clsv.post_addr;
 
-            this.accountsBindingSource.Filter = "client=" + clsv._userID;
-            this.accountsTableAdapter.Fill(dataTable: this.basereforgedDataSet4.accounts);
+           
 
 
         }
@@ -113,7 +129,7 @@ namespace Bank_Accounting
             Account.ClientName = LegalName.Text;
             AccountElement accel = new AccountElement();
             accel.ShowDialog();
-            this.accountsTableAdapter.Fill(this.basereforgedDataSet4.accounts);
+            
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -121,7 +137,7 @@ namespace Bank_Accounting
             Account.AccRow = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
             Account acnt = new Account();
             acnt.AccDelete();
-            this.accountsTableAdapter.Fill(this.basereforgedDataSet4.accounts);
+            
         }
     }
 }
