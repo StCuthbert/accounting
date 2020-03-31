@@ -57,61 +57,11 @@
     <Compile Include="AccountElement.Designer.cs">
       <DependentUpon>AccountElement.cs</DependentUpon>
     </Compile>
-    <Compile Include="AccountList.cs">
+    <Compile Include="AccountsForOperation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AccountList.Designer.cs">
-      <DependentUpon>AccountList.cs</DependentUpon>
-    </Compile>
-    <Compile Include="bankbaseDataSet.Designer.cs">
-      <DependentUpon>bankbaseDataSet.xsd</DependentUpon>
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-    </Compile>
-    <Compile Include="bankbaseDataSet1.Designer.cs">
-      <DependentUpon>bankbaseDataSet1.xsd</DependentUpon>
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-    </Compile>
-    <Compile Include="bankbaseDataSet2.Designer.cs">
-      <DependentUpon>bankbaseDataSet2.xsd</DependentUpon>
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-    </Compile>
-    <Compile Include="bankbaseDataSetCLAcc.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>bankbaseDataSetCLAcc.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="bankbaseDataSetClList.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>bankbaseDataSetClList.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="basereforgedDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>basereforgedDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="basereforgedDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>basereforgedDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="basereforgedDataSet2.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>basereforgedDataSet2.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="basereforgedDataSet3.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>basereforgedDataSet3.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="basereforgedDataSet4.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>basereforgedDataSet4.xsd</DependentUpon>
+    <Compile Include="AccountsForOperation.Designer.cs">
+      <DependentUpon>AccountsForOperation.cs</DependentUpon>
     </Compile>
     <Compile Include="Calculations.cs" />
     <Compile Include="ClientChoice.cs">
@@ -125,6 +75,12 @@
     </Compile>
     <Compile Include="ClientElement.Designer.cs">
       <DependentUpon>ClientElement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientForOperation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientForOperation.Designer.cs">
+      <DependentUpon>ClientForOperation.cs</DependentUpon>
     </Compile>
     <Compile Include="ClientsList.cs">
       <SubType>Form</SubType>
@@ -178,9 +134,33 @@
     <Compile Include="OperationsList.Designer.cs">
       <DependentUpon>OperationsList.cs</DependentUpon>
     </Compile>
+    <Compile Include="PaymentElement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentElement.Designer.cs">
+      <DependentUpon>PaymentElement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentPurposeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentPurposeList.Designer.cs">
+      <DependentUpon>PaymentPurposeList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Client.cs" />
+    <Compile Include="RateAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RateAdd.Designer.cs">
+      <DependentUpon>RateAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RatesHandbook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RatesHandbook.Designer.cs">
+      <DependentUpon>RatesHandbook.cs</DependentUpon>
+    </Compile>
     <Compile Include="TransferOp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,14 +176,17 @@
     <EmbeddedResource Include="AccountElement.resx">
       <DependentUpon>AccountElement.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AccountList.resx">
-      <DependentUpon>AccountList.cs</DependentUpon>
+    <EmbeddedResource Include="AccountsForOperation.resx">
+      <DependentUpon>AccountsForOperation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ClientChoice.resx">
       <DependentUpon>ClientChoice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ClientElement.resx">
       <DependentUpon>ClientElement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientForOperation.resx">
+      <DependentUpon>ClientForOperation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ClientsList.resx">
       <DependentUpon>ClientsList.cs</DependentUpon>
@@ -226,6 +209,12 @@
     <EmbeddedResource Include="OperationsList.resx">
       <DependentUpon>OperationsList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PaymentElement.resx">
+      <DependentUpon>PaymentElement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentPurposeList.resx">
+      <DependentUpon>PaymentPurposeList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -235,122 +224,18 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RateAdd.resx">
+      <DependentUpon>RateAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RatesHandbook.resx">
+      <DependentUpon>RatesHandbook.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TransferOp.resx">
       <DependentUpon>TransferOp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WithdrawOp.resx">
       <DependentUpon>WithdrawOp.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="bankbaseDataSet.xsc">
-      <DependentUpon>bankbaseDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="bankbaseDataSet.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>bankbaseDataSet.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="bankbaseDataSet.xss">
-      <DependentUpon>bankbaseDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="bankbaseDataSet1.xsc">
-      <DependentUpon>bankbaseDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="bankbaseDataSet1.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>bankbaseDataSet1.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="bankbaseDataSet1.xss">
-      <DependentUpon>bankbaseDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="bankbaseDataSet2.xsc">
-      <DependentUpon>bankbaseDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="bankbaseDataSet2.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>bankbaseDataSet2.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="bankbaseDataSet2.xss">
-      <DependentUpon>bankbaseDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="bankbaseDataSetCLAcc.xsc">
-      <DependentUpon>bankbaseDataSetCLAcc.xsd</DependentUpon>
-    </None>
-    <None Include="bankbaseDataSetCLAcc.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>bankbaseDataSetCLAcc.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="bankbaseDataSetCLAcc.xss">
-      <DependentUpon>bankbaseDataSetCLAcc.xsd</DependentUpon>
-    </None>
-    <None Include="bankbaseDataSetClList.xsc">
-      <DependentUpon>bankbaseDataSetClList.xsd</DependentUpon>
-    </None>
-    <None Include="bankbaseDataSetClList.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>bankbaseDataSetClList.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="bankbaseDataSetClList.xss">
-      <DependentUpon>bankbaseDataSetClList.xsd</DependentUpon>
-    </None>
-    <None Include="basereforgedDataSet.xsc">
-      <DependentUpon>basereforgedDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="basereforgedDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>basereforgedDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="basereforgedDataSet.xss">
-      <DependentUpon>basereforgedDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="basereforgedDataSet1.xsc">
-      <DependentUpon>basereforgedDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="basereforgedDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>basereforgedDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="basereforgedDataSet1.xss">
-      <DependentUpon>basereforgedDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="basereforgedDataSet2.xsc">
-      <DependentUpon>basereforgedDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="basereforgedDataSet2.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>basereforgedDataSet2.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="basereforgedDataSet2.xss">
-      <DependentUpon>basereforgedDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="basereforgedDataSet3.xsc">
-      <DependentUpon>basereforgedDataSet3.xsd</DependentUpon>
-    </None>
-    <None Include="basereforgedDataSet3.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>basereforgedDataSet3.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="basereforgedDataSet3.xss">
-      <DependentUpon>basereforgedDataSet3.xsd</DependentUpon>
-    </None>
-    <None Include="basereforgedDataSet4.xsc">
-      <DependentUpon>basereforgedDataSet4.xsd</DependentUpon>
-    </None>
-    <None Include="basereforgedDataSet4.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>basereforgedDataSet4.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="basereforgedDataSet4.xss">
-      <DependentUpon>basereforgedDataSet4.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

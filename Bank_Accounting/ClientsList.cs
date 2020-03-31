@@ -40,6 +40,15 @@ namespace Bank_Accounting
 
         }
 
+        private void Rebuild()
+        {
+
+            data = new Client().ClientListFill();
+            view = new DataView(data);
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = view;
+
+        }
         private void Build()
         {
             
@@ -82,8 +91,8 @@ namespace Bank_Accounting
                 legalcl.ShowDialog();
             }
 
-           
             
+
 
         }
 
@@ -102,8 +111,9 @@ namespace Bank_Accounting
         {
             ClientChoice choice = new ClientChoice();
             choice.ShowDialog();
-            this.clientsTableAdapter4.Fill(this.basereforgedDataSet2.clients);
-           
+            Rebuild();
+
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -111,12 +121,13 @@ namespace Bank_Accounting
             Client.RowId = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
             Client client = new Client();
             client.ClientDel();
+            Rebuild();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             
-            this.clientsTableAdapter4.Fill(this.basereforgedDataSet2.clients);
+           
            
         }
 

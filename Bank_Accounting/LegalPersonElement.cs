@@ -35,6 +35,14 @@ namespace Bank_Accounting
             dataGridView1.DataSource = view;
         }
 
+        private void Rebuild()
+        {
+            data = new Account().AccountListFill();
+            view = new DataView(data);
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = view;
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -129,6 +137,7 @@ namespace Bank_Accounting
             Account.ClientName = LegalName.Text;
             AccountElement accel = new AccountElement();
             accel.ShowDialog();
+            Rebuild();
             
         }
 
@@ -138,6 +147,13 @@ namespace Bank_Accounting
             Account acnt = new Account();
             acnt.AccDelete();
             
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Account acc = new Account();
+            acc.AccDelete();
+            Rebuild();
         }
     }
 }

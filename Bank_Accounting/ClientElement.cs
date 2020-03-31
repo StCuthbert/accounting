@@ -31,6 +31,18 @@ namespace Bank_Accounting
                 view = new DataView(data);
             }
 
+            var nameFilter = ClientID.Text;
+            
+                view.RowFilter = string.Format(nameFilter);
+
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = view;
+        }
+
+        private void Rebuild()
+        {
+            data = new Account().AccountListFill();
+            view = new DataView(data);
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = view;
         }
@@ -66,11 +78,11 @@ namespace Bank_Accounting
                 AdditionalInfo.Text = client.additional;
 
                 
-                 
+              /*   
                 this.accountsBindingSource4.Filter = "client=" + client._userID;
                 this.accountsTableAdapter.Fill(dataTable: this.bankbaseDataSetCLAcc.accounts);
                           
-              
+              */
 
         }
 
@@ -127,7 +139,8 @@ namespace Bank_Accounting
             Account.ClientName = Physname.Text;
             AccountElement accel = new AccountElement();
             accel.ShowDialog();
-            this.accountsTableAdapter1.Fill(this.basereforgedDataSet3.accounts);
+            Rebuild();
+            
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -135,7 +148,7 @@ namespace Bank_Accounting
            Account.AccRow = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
            Account acnt = new Account();
            acnt.AccDelete();
-           this.accountsTableAdapter1.Fill(this.basereforgedDataSet3.accounts);
+       
 
 
         }

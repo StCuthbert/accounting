@@ -24,8 +24,7 @@ namespace Bank_Accounting
 
         private void button3_Click(object sender, EventArgs e)
         {
-            AccountList a = new AccountList();
-            a.ShowDialog();
+       
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -43,6 +42,18 @@ namespace Bank_Accounting
         {
             OperationsList oplist = new OperationsList();
             oplist.ShowDialog();
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            RatesHandbook ratehand = new RatesHandbook();
+            ratehand.ShowDialog();
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            PaymentPurposeList paylist = new PaymentPurposeList();
+            paylist.ShowDialog();
         }
     }
 }

@@ -70,46 +70,27 @@
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.accountsBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
-            this.basereforgedDataSet3 = new Bank_Accounting.basereforgedDataSet3();
+      
             this.accountsBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.bankbaseDataSetCLAccBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bankbaseDataSetCLAcc = new Bank_Accounting.bankbaseDataSetCLAcc();
+  
             this.clientsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bankbaseDataSet1 = new Bank_Accounting.bankbaseDataSet1();
-            this.bankbaseDataSet = new Bank_Accounting.bankbaseDataSet();
+   
+
             this.bankbaseDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.clientsTableAdapter = new Bank_Accounting.bankbaseDataSet1TableAdapters.clientsTableAdapter();
-            this.bankbaseDataSet2 = new Bank_Accounting.bankbaseDataSet2();
-            this.clientsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.clientsTableAdapter1 = new Bank_Accounting.bankbaseDataSet2TableAdapters.clientsTableAdapter();
-            this.accountsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.accountsTableAdapter = new Bank_Accounting.bankbaseDataSetCLAccTableAdapters.accountsTableAdapter();
-            this.accountsBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+
+
+           
             this.label14 = new System.Windows.Forms.Label();
             this.PhysNation = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.accountsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.basereforgedDataSet = new Bank_Accounting.basereforgedDataSet();
+      
             this.basereforgedDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.accountsTableAdapter1 = new Bank_Accounting.basereforgedDataSet3TableAdapters.accountsTableAdapter();
+        
             this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.basereforgedDataSet3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bankbaseDataSetCLAccBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bankbaseDataSetCLAcc)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bankbaseDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bankbaseDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bankbaseDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bankbaseDataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.basereforgedDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.basereforgedDataSetBindingSource)).BeginInit();
+            
             this.SuspendLayout();
             // 
             // Physname
@@ -444,83 +425,7 @@
             this.clientDataGridViewTextBoxColumn.HeaderText = "Клиент";
             this.clientDataGridViewTextBoxColumn.Name = "clientDataGridViewTextBoxColumn";
             this.clientDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // accountsBindingSource4
-            // 
-            this.accountsBindingSource4.DataMember = "accounts";
-            this.accountsBindingSource4.DataSource = this.basereforgedDataSet3;
-            // 
-            // basereforgedDataSet3
-            // 
-            this.basereforgedDataSet3.DataSetName = "basereforgedDataSet3";
-            this.basereforgedDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // accountsBindingSource2
-            // 
-            this.accountsBindingSource2.DataMember = "accounts";
-            this.accountsBindingSource2.DataSource = this.bankbaseDataSetCLAccBindingSource;
-            // 
-            // bankbaseDataSetCLAccBindingSource
-            // 
-            this.bankbaseDataSetCLAccBindingSource.DataSource = this.bankbaseDataSetCLAcc;
-            this.bankbaseDataSetCLAccBindingSource.Position = 0;
-            // 
-            // bankbaseDataSetCLAcc
-            // 
-            this.bankbaseDataSetCLAcc.DataSetName = "bankbaseDataSetCLAcc";
-            this.bankbaseDataSetCLAcc.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // clientsBindingSource
-            // 
-            this.clientsBindingSource.DataMember = "clients";
-            this.clientsBindingSource.DataSource = this.bankbaseDataSet1;
-            // 
-            // bankbaseDataSet1
-            // 
-            this.bankbaseDataSet1.DataSetName = "bankbaseDataSet1";
-            this.bankbaseDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // bankbaseDataSet
-            // 
-            this.bankbaseDataSet.DataSetName = "bankbaseDataSet";
-            this.bankbaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // bankbaseDataSetBindingSource
-            // 
-            this.bankbaseDataSetBindingSource.DataSource = this.bankbaseDataSet;
-            this.bankbaseDataSetBindingSource.Position = 0;
-            // 
-            // clientsTableAdapter
-            // 
-            this.clientsTableAdapter.ClearBeforeFill = true;
-            // 
-            // bankbaseDataSet2
-            // 
-            this.bankbaseDataSet2.DataSetName = "bankbaseDataSet2";
-            this.bankbaseDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // clientsBindingSource1
-            // 
-            this.clientsBindingSource1.DataMember = "clients";
-            this.clientsBindingSource1.DataSource = this.bankbaseDataSet2;
-            // 
-            // clientsTableAdapter1
-            // 
-            this.clientsTableAdapter1.ClearBeforeFill = true;
-            // 
-            // accountsBindingSource1
-            // 
-            this.accountsBindingSource1.DataMember = "accounts";
-            this.accountsBindingSource1.DataSource = this.bankbaseDataSetCLAcc;
-            // 
-            // accountsTableAdapter
-            // 
-            this.accountsTableAdapter.ClearBeforeFill = true;
-            // 
-            // accountsBindingSource3
-            // 
-            this.accountsBindingSource3.DataMember = "accounts";
-            this.accountsBindingSource3.DataSource = this.bankbaseDataSetCLAccBindingSource;
+           
             // 
             // label14
             // 
@@ -547,24 +452,7 @@
             this.button2.Text = "Добавить";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
-            // 
-            // accountsBindingSource
-            // 
-            this.accountsBindingSource.DataMember = "accounts";
-            // 
-            // basereforgedDataSet
-            // 
-            this.basereforgedDataSet.DataSetName = "basereforgedDataSet";
-            this.basereforgedDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // basereforgedDataSetBindingSource
-            // 
-            this.basereforgedDataSetBindingSource.DataSource = this.basereforgedDataSet;
-            this.basereforgedDataSetBindingSource.Position = 0;
-            // 
-            // accountsTableAdapter1
-            // 
-            this.accountsTableAdapter1.ClearBeforeFill = true;
+           
             // 
             // button4
             // 
@@ -620,22 +508,7 @@
             this.Text = "Карточка клиента";
             this.Load += new System.EventHandler(this.ClientElementPhys_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.basereforgedDataSet3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bankbaseDataSetCLAccBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bankbaseDataSetCLAcc)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bankbaseDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bankbaseDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bankbaseDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bankbaseDataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.basereforgedDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.basereforgedDataSetBindingSource)).EndInit();
+           
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -685,16 +558,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn currencyDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn balanceDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource bankbaseDataSetBindingSource;
-        private bankbaseDataSet bankbaseDataSet;
-        private bankbaseDataSet1 bankbaseDataSet1;
+       
         private System.Windows.Forms.BindingSource clientsBindingSource;
-        private bankbaseDataSet1TableAdapters.clientsTableAdapter clientsTableAdapter;
-        private bankbaseDataSet2 bankbaseDataSet2;
+       
         private System.Windows.Forms.BindingSource clientsBindingSource1;
-        private bankbaseDataSet2TableAdapters.clientsTableAdapter clientsTableAdapter1;
-        private bankbaseDataSetCLAcc bankbaseDataSetCLAcc;
+        
         private System.Windows.Forms.BindingSource accountsBindingSource1;
-        private bankbaseDataSetCLAccTableAdapters.accountsTableAdapter accountsTableAdapter;
+        
         private System.Windows.Forms.BindingSource bankbaseDataSetCLAccBindingSource;
         private System.Windows.Forms.BindingSource accountsBindingSource2;
         private System.Windows.Forms.BindingSource accountsBindingSource3;
@@ -702,10 +572,9 @@
         private System.Windows.Forms.TextBox PhysNation;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.BindingSource basereforgedDataSetBindingSource;
-        private basereforgedDataSet basereforgedDataSet;
-        private basereforgedDataSet3 basereforgedDataSet3;
+        
         private System.Windows.Forms.BindingSource accountsBindingSource4;
-        private basereforgedDataSet3TableAdapters.accountsTableAdapter accountsTableAdapter1;
+        
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
