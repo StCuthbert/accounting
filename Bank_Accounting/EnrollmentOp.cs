@@ -94,15 +94,25 @@ namespace Bank_Accounting
         private void button3_Click(object sender, EventArgs e)
         {
             Operations op = new Operations();
-            op.EnrollSave();
+            op.sumoftransaction = Convert.ToDecimal(SumOfTrans.Text);
+            op.rate = Convert.ToDecimal(comboRate.Text);
+            op.payment_kind = ComboPay.Text;
+            op.typeOp = "зачисление";
+            Operations.AccountID = Convert.ToInt32(AccID.Text);
+            
+            op.OpSave();
+            this.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            this.AccNumber.Text = "";
+            this.AccID.Text = "";
             ClientForOperation clOp = new ClientForOperation();
             clOp.ShowDialog();
             this.ClientName.Text = Operations.ClientName;
             this.ClientID.Text = Operations.ClientID.ToString();
+            this.button2.Enabled = true;
             
         }
 

@@ -19,6 +19,7 @@ namespace Bank_Accounting
         public LegalPersonElement()
         {
             InitializeComponent();
+            Initialize();
             Build();
         }
 
@@ -30,7 +31,8 @@ namespace Bank_Accounting
                 data = new Account().AccountListFill();
                 view = new DataView(data);
             }
-
+            var idFilter = LegalID.Text;
+            view.RowFilter = string.Format("client =" + idFilter);
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = view;
         }
@@ -39,9 +41,46 @@ namespace Bank_Accounting
         {
             data = new Account().AccountListFill();
             view = new DataView(data);
+            var idFilter = LegalID.Text;
+            view.RowFilter = string.Format("client =" + idFilter);
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = view;
         }
+
+        private void Initialize()
+        {
+            this.dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.MultiSelect = false;
+
+
+
+            Client clsv = new Client();
+            clsv.LegalFill();
+
+            LegalID.Text = clsv._userID;
+            LegalName.Text = clsv.name;
+            INN.Text = clsv.INN;
+            KPP.Text = clsv.KPP;
+            Phone.Text = clsv.phone_num;
+            Email.Text = clsv.email;
+            Additional.Text = clsv.additional;
+            Address.Text = clsv.address;
+            FullName.Text = clsv.fullname;
+            OKVED.Text = clsv.okved;
+            OKPO.Text = clsv.okpo;
+            OGRN.Text = clsv.ogrn;
+            OKATO.Text = clsv.okato;
+            OKTMO.Text = clsv.oktmo;
+            Catcode.Text = clsv.catcode;
+            CB_corr.Text = clsv.cenral_corr;
+            Acc.Text = clsv.acc;
+            BIK.Text = clsv.BIK;
+            BankName.Text = clsv.bank_name;
+            BankAddr.Text = clsv.bank_addr;
+            Director.Text = clsv.director;
+            PostAddr.Text = clsv.post_addr;
+        }
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -95,39 +134,7 @@ namespace Bank_Accounting
         private void LegalPersonElement_Load(object sender, EventArgs e)
         {
            
-            this.dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.MultiSelect = false;
-
-           
-
-            Client clsv = new Client();
-            clsv.LegalFill();
-
-            LegalID.Text = clsv._userID;
-            LegalName.Text = clsv.name;
-            INN.Text = clsv.INN;
-            KPP.Text = clsv.KPP;
-            Phone.Text = clsv.phone_num;
-            Email.Text = clsv.email;
-            Additional.Text = clsv.additional;
-            Address.Text = clsv.address;
-            FullName.Text = clsv.fullname;
-            OKVED.Text = clsv.okved;
-            OKPO.Text = clsv.okpo;
-            OGRN.Text = clsv.ogrn;
-            OKATO.Text = clsv.okato;
-            OKTMO.Text = clsv.oktmo;
-            Catcode.Text = clsv.catcode;
-            CB_corr.Text = clsv.cenral_corr;
-            Acc.Text = clsv.acc;
-            BIK.Text = clsv.BIK;
-            BankName.Text = clsv.bank_name;
-            BankAddr.Text = clsv.bank_addr;
-            Director.Text = clsv.director;
-            PostAddr.Text = clsv.post_addr;
-
-           
-
+            
 
         }
 

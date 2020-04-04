@@ -49,6 +49,7 @@ namespace Bank_Accounting
             dataGridView1.DataSource = view;
 
         }
+
         private void Build()
         {
             

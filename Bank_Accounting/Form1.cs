@@ -55,5 +55,11 @@ namespace Bank_Accounting
             PaymentPurposeList paylist = new PaymentPurposeList();
             paylist.ShowDialog();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Bank_Operations bankop = new Bank_Operations();
+            bankop.ShowDialog();
+        }
     }
 }

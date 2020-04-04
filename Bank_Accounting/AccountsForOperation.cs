@@ -30,8 +30,11 @@ namespace Bank_Accounting
                 view = new DataView(data);
             }
 
+            var idFilter = Operations.ClientID.ToString();
+            view.RowFilter = string.Format("client =" + idFilter);
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = view;
+           
         }
 
        

@@ -63,6 +63,12 @@
     <Compile Include="AccountsForOperation.Designer.cs">
       <DependentUpon>AccountsForOperation.cs</DependentUpon>
     </Compile>
+    <Compile Include="Bank_Operations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bank_Operations.Designer.cs">
+      <DependentUpon>Bank_Operations.cs</DependentUpon>
+    </Compile>
     <Compile Include="Calculations.cs" />
     <Compile Include="ClientChoice.cs">
       <SubType>Form</SubType>
@@ -178,6 +184,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AccountsForOperation.resx">
       <DependentUpon>AccountsForOperation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bank_Operations.resx">
+      <DependentUpon>Bank_Operations.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ClientChoice.resx">
       <DependentUpon>ClientChoice.cs</DependentUpon>

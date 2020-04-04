@@ -18,6 +18,11 @@ namespace Bank_Accounting
         static public int RateId;
         static public int PaymentId;
         static public string AccCurrency;
+        static public string RecieverName;
+        static public int RecieverID;
+        static public string RecieverAcc;
+        static public int RecieverAccID;
+        static public int OpId;
 
         public decimal sumoftransaction;
         public decimal rate;
@@ -25,6 +30,7 @@ namespace Bank_Accounting
         public decimal totalsum;
         public decimal newrate;
         public string payment_kind;
+        public string typeOp;
 
         public DataTable OperationListFill()
         {
@@ -66,6 +72,17 @@ namespace Bank_Accounting
             MySqlConnection conn = DBUtils.GetDBConnection();
             conn.Open();
             string sql = "SELECT * FROM rates";
+            MySqlCommand cmd = new MySqlCommand(sql, conn);
+            var dt = new DataTable();
+            new MySqlDataAdapter(cmd).Fill(dt);
+            return dt;
+        }
+
+        public DataTable BankopListFill()
+        {
+            MySqlConnection conn = DBUtils.GetDBConnection();
+            conn.Open();
+            string sql = "SELECT * FROM bank_history";
             MySqlCommand cmd = new MySqlCommand(sql, conn);
             var dt = new DataTable();
             new MySqlDataAdapter(cmd).Fill(dt);
@@ -136,21 +153,35 @@ namespace Bank_Accounting
             RateId = 0;
         }
 
-        public void EnrollSave()
+        public void OpSave()
         {
             MySqlConnection conn = DBUtils.GetDBConnection();
             conn.Open();
 
             string sql = "INSERT INTO history (id, type, sumoftransaction, rate, comission, totalsum, trans_date, acc1_id, acc2_id, kind)" +
-                "VALUES(null, @type, @sumoftransaction, @rate, null, null, now(), @acc1_id, null, @kind)";
+                "VALUES(null, @type, @sumoftransaction, @rate, null, null, now(), @acc1_id, @acc2_id, @kind)";
             MySqlCommand cmd = new MySqlCommand(sql, conn);
+            
 
-            string typeOp = "зачисление";
+            if(RecieverAccID == 0)
+            {
+                MySqlParameter acc2IdOpParam = new MySqlParameter("@acc2_id", DBNull.Value);
+                cmd.Parameters.Add(acc2IdOpParam);
+            }
+            else
+            {
+                MySqlParameter acc2IdOpParam = new MySqlParameter("@acc2_id", RecieverAccID);
+                cmd.Parameters.Add(acc2IdOpParam);
+            }
+            
             //Параметры
+            
+           
             MySqlParameter typeOpParam = new MySqlParameter("@type", typeOp);
             MySqlParameter sumtransParam = new MySqlParameter("@sumoftransaction", sumoftransaction);
             MySqlParameter rateOpParam = new MySqlParameter("@rate", rate);
             MySqlParameter accIdOpParam = new MySqlParameter("@acc1_id", AccountID);
+            
             MySqlParameter kindOpParam = new MySqlParameter("@kind", payment_kind);
 
 
@@ -163,6 +194,19 @@ namespace Bank_Accounting
             conn.Close();
         }
 
+        public void OpDel()
+        {
+            MySqlConnection conn = DBUtils.GetDBConnection();
+            conn.Open();
+            string sql = "DELETE FROM history WHERE id= @OpId";
+            MySqlCommand cmd = new MySqlCommand(sql, conn);
+            MySqlParameter OpidParam = new MySqlParameter("@OpID", OpId);
+            cmd.Parameters.Add(OpidParam);
+            cmd.ExecuteReader();
+            conn.Close();
+            OpId = 0;
+
+        }
         public void OperationView()
         {
             comission = sumoftransaction / 100 * rate;

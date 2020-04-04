@@ -19,6 +19,7 @@ namespace Bank_Accounting
         public ClientElementPhys()
         {
             InitializeComponent();
+            Initialize();
             Build();
         }
 
@@ -31,12 +32,37 @@ namespace Bank_Accounting
                 view = new DataView(data);
             }
 
-            var nameFilter = ClientID.Text;
             
-                view.RowFilter = string.Format(nameFilter);
-
+            var idFilter = ClientID.Text;
+            view.RowFilter = string.Format("client =" + idFilter);
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = view;
+        }
+
+        private void Initialize()
+        {
+            this.dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.MultiSelect = false;
+
+            Client client = new Client();
+
+            client.PhysFill();
+
+            ClientID.Text = client._userID;
+            Physname.Text = client.name;
+            PhysNation.Text = client.nationality;
+            BirthDate.Value = client.birth;
+            IdentityDoc.Text = client.document;
+            SerialNum.Text = client.serial_num;
+            IssueDate.Value = client.date_of_issue;
+            Issuing.Text = client.issuing;
+            PhoneNumber.Text = client.phone_num;
+            Email.Text = client.email;
+            INN.Text = client.INN;
+            KPP.Text = client.KPP;
+            RegAddr.Text = client.address;
+            AdditionalInfo.Text = client.additional;
+
         }
 
         private void Rebuild()
@@ -45,6 +71,8 @@ namespace Bank_Accounting
             view = new DataView(data);
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = view;
+            var idFilter = ClientID.Text;
+            view.RowFilter = string.Format("client =" + idFilter);
         }
 
         private void Surname_TextChanged(object sender, EventArgs e)
@@ -54,36 +82,8 @@ namespace Bank_Accounting
 
         private void ClientElementPhys_Load(object sender, EventArgs e)
         {
-           
-            this.dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.MultiSelect = false;
-
-                Client client = new Client();
-
-                client.PhysFill();
-
-                ClientID.Text = client._userID;
-                Physname.Text = client.name;
-                PhysNation.Text = client.nationality;
-                BirthDate.Value = client.birth;
-                IdentityDoc.Text = client.document;
-                SerialNum.Text = client.serial_num;
-                IssueDate.Value = client.date_of_issue;
-                Issuing.Text = client.issuing;
-                PhoneNumber.Text = client.phone_num;
-                Email.Text = client.email;
-                INN.Text = client.INN;
-                KPP.Text = client.KPP;
-                RegAddr.Text = client.address;
-                AdditionalInfo.Text = client.additional;
-
-                
-              /*   
-                this.accountsBindingSource4.Filter = "client=" + client._userID;
-                this.accountsTableAdapter.Fill(dataTable: this.bankbaseDataSetCLAcc.accounts);
-                          
-              */
-
+          
+            
         }
 
         private void button1_Click(object sender, EventArgs e)

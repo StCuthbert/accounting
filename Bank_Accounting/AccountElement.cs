@@ -33,6 +33,7 @@ namespace Bank_Accounting
             account.kind = Kind.Text;
             account.currency = Currency.Text;
             account.AccSave();
+            this.Close();
 
         }
 
