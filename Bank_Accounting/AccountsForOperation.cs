@@ -43,6 +43,15 @@ namespace Bank_Accounting
         {
             this.dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.MultiSelect = false;
+            dataGridView1.Columns[0].HeaderText = "ID";
+            dataGridView1.Columns[1].HeaderText = "Номер счёта";
+            dataGridView1.Columns[2].HeaderText = "Наименование банка";
+            dataGridView1.Columns[3].HeaderText = "БИК";
+            dataGridView1.Columns[4].HeaderText = "Корреспондентский счёт";
+            dataGridView1.Columns[5].HeaderText = "Вид счёта";
+            dataGridView1.Columns[6].HeaderText = "Валюта";
+            dataGridView1.Columns[7].HeaderText = "Баланс";
+            dataGridView1.Columns[8].HeaderText = "Клиент";
         }
 
         private void button2_Click(object sender, EventArgs e)

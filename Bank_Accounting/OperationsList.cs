@@ -83,21 +83,30 @@ namespace Bank_Accounting
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Operations.OpId = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            
 
             switch (dataGridView1.CurrentRow.Cells[1].Value.ToString())
             {
                 case "зачисление":
 
+                    Operations.OpId = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
                     EnrollElement enrEl = new EnrollElement();
                     enrEl.ShowDialog();
 
                     break;
 
                 case "снятие":
+
+                    Operations.OpId = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+                    WithdrawElement withEl = new WithdrawElement();
+                    withEl.ShowDialog();
+
                     break;
 
                 case "перевод":
+
+                    Operations.OpId = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+
                     break;
 
             }

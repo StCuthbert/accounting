@@ -80,6 +80,7 @@ namespace Bank_Accounting
             op.sumoftransaction = Convert.ToDecimal(SumOfTrans.Text);
             op.rate = Convert.ToDecimal(comboRate.Text);
             op.typeOp = "снятие";
+            op.payment_kind = " ";
             Operations.AccountID = Convert.ToInt32(AccID.Text);
 
             op.OpSave();

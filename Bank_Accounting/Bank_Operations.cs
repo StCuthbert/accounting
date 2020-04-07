@@ -63,6 +63,7 @@ namespace Bank_Accounting
             dataGridView1.Columns[4].HeaderText = "Вид";
             dataGridView1.Columns[5].HeaderText = "Счёт-отправитель";
             dataGridView1.Columns[6].HeaderText = "Счёт-получатель";
+            dataGridView1.Columns[7].HeaderText = "История";
         }
     }
 }

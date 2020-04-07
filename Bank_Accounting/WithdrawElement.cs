@@ -10,28 +10,21 @@ using System.Windows.Forms;
 
 namespace Bank_Accounting
 {
-    public partial class EnrollElement : Form
+    public partial class WithdrawElement : Form
     {
-        public EnrollElement()
+        public WithdrawElement()
         {
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void EnrollElement_Load(object sender, EventArgs e)
+        private void WithdrawElement_Load(object sender, EventArgs e)
         {
             this.DateOfTrans.CustomFormat = "dd.MM.yyyy HH:mm:ss";
+
             Operations op = new Operations();
+
             op.OpElementFill();
+
             ID.Text = op.HistoryID;
             ClientName.Text = Operations.ClientName;
             ClientID.Text = Operations.ClientID.ToString();
@@ -42,8 +35,11 @@ namespace Bank_Accounting
             Comission.Text = op._comission;
             Totalsum.Text = op._totalsum;
             DateOfTrans.Value = op.transdate;
-            PaymentPurpose.Text = op.payment_kind;
-            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

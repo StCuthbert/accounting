@@ -210,7 +210,14 @@ namespace Bank_Accounting
             MySqlCommand cmd = new MySqlCommand(sql, conn);
             MySqlParameter OpidParam = new MySqlParameter("@OpID", OpId);
             cmd.Parameters.Add(OpidParam);
-            cmd.ExecuteReader();
+            MySqlDataReader reader = cmd.ExecuteReader();
+            reader.Close();
+
+            string mysql = "DELETE FROM bank_history WHERE history_id= @OpId";
+            MySqlCommand com = new MySqlCommand(mysql, conn);
+            com.Parameters.Add(OpidParam);
+            com.ExecuteReader();
+
             conn.Close();
             OpId = 0;
 
@@ -222,7 +229,7 @@ namespace Bank_Accounting
             
         }
 
-        public void EnrollFill()
+        public void OpElementFill()
         {
             MySqlConnection conn = DBUtils.GetDBConnection();
             conn.Open();
