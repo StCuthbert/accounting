@@ -54,7 +54,15 @@ namespace Bank_Accounting
 
         private void Bank_Operations_Load(object sender, EventArgs e)
         {
-
+            this.dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.MultiSelect = false;
+            dataGridView1.Columns[0].HeaderText = "ID";
+            dataGridView1.Columns[1].HeaderText = "Тип";
+            dataGridView1.Columns[2].HeaderText = "Итоговая сумма";
+            dataGridView1.Columns[3].HeaderText = "Дата операции";
+            dataGridView1.Columns[4].HeaderText = "Вид";
+            dataGridView1.Columns[5].HeaderText = "Счёт-отправитель";
+            dataGridView1.Columns[6].HeaderText = "Счёт-получатель";
         }
     }
 }

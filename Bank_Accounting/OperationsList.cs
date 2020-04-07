@@ -55,6 +55,17 @@ namespace Bank_Accounting
         {
             this.dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.MultiSelect = false;
+
+            dataGridView1.Columns[0].HeaderText = "ID";
+            dataGridView1.Columns[1].HeaderText = "Тип операции";
+            dataGridView1.Columns[2].HeaderText = "Сумма операции";
+            dataGridView1.Columns[3].HeaderText = "Процентная ставка";
+            dataGridView1.Columns[4].HeaderText = "Сумма комиссии";
+            dataGridView1.Columns[5].HeaderText = "Итоговая сумма";
+            dataGridView1.Columns[6].HeaderText = "Дата операции";
+            dataGridView1.Columns[7].HeaderText = "Счёт-отправитель";
+            dataGridView1.Columns[8].HeaderText = "Счёт-получатель";
+            dataGridView1.Columns[9].HeaderText = "Назначение";
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -68,6 +79,29 @@ namespace Bank_Accounting
             Operations op = new Operations();
             op.OpDel();
             Rebuild();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Operations.OpId = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+
+            switch (dataGridView1.CurrentRow.Cells[1].Value.ToString())
+            {
+                case "зачисление":
+
+                    EnrollElement enrEl = new EnrollElement();
+                    enrEl.ShowDialog();
+
+                    break;
+
+                case "снятие":
+                    break;
+
+                case "перевод":
+                    break;
+
+            }
+            
         }
     }
 }

@@ -96,6 +96,12 @@
     </Compile>
     <Compile Include="DBMySQLUtils.cs" />
     <Compile Include="DBUtils.cs" />
+    <Compile Include="EnrollElement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnrollElement.Designer.cs">
+      <DependentUpon>EnrollElement.cs</DependentUpon>
+    </Compile>
     <Compile Include="EnrollmentOp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -199,6 +205,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ClientsList.resx">
       <DependentUpon>ClientsList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnrollElement.resx">
+      <DependentUpon>EnrollElement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EnrollmentOp.resx">
       <DependentUpon>EnrollmentOp.cs</DependentUpon>
