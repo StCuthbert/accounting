@@ -260,10 +260,39 @@ namespace Bank_Accounting
                         ClientName = reader.GetString(20);
 
 
+                        
+                    }
+                   
+
+                }
+            }
+
+            if (typeOp == "перевод")
+            {
+                string mysql = "SELECT * FROM history JOIN accounts ON(accounts.id = history.acc2_id) JOIN clients ON(clients.id = accounts.client) WHERE history.id = @OpID ";
+                MySqlCommand com = new MySqlCommand(mysql, conn);
+                com.Parameters.Add(OpidParam);
+
+                using (DbDataReader reader = com.ExecuteReader())
+                {
+                    if (reader.HasRows)
+                    {
+
+                        while (reader.Read())
+                        {
+
+
+                            RecieverAccID = Convert.ToInt32(reader.GetValue(7));
+                            RecieverAcc = reader.GetString(11);
+                            RecieverID = Convert.ToInt32(reader.GetValue(19));
+                            RecieverName = reader.GetString(20);
+
+
+
+                        }
+
 
                     }
-
-
                 }
             }
 

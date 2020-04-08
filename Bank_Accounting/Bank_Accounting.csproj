@@ -173,6 +173,12 @@
     <Compile Include="RatesHandbook.Designer.cs">
       <DependentUpon>RatesHandbook.cs</DependentUpon>
     </Compile>
+    <Compile Include="TransferElement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransferElement.Designer.cs">
+      <DependentUpon>TransferElement.cs</DependentUpon>
+    </Compile>
     <Compile Include="TransferOp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -253,6 +259,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RatesHandbook.resx">
       <DependentUpon>RatesHandbook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransferElement.resx">
+      <DependentUpon>TransferElement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TransferOp.resx">
       <DependentUpon>TransferOp.cs</DependentUpon>

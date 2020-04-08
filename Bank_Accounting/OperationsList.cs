@@ -106,6 +106,8 @@ namespace Bank_Accounting
                 case "перевод":
 
                     Operations.OpId = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+                    TransferElement transel = new TransferElement();
+                    transel.ShowDialog();
 
                     break;
 
