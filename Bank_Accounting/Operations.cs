@@ -170,10 +170,10 @@ namespace Bank_Accounting
                 "VALUES(null, @type, @sumoftransaction, @rate, null, null, now(), @acc1_id, @acc2_id, @kind)";
             MySqlCommand cmd = new MySqlCommand(sql, conn);
             
-
+            /*
             if(RecieverAccID == 0)
             {
-                MySqlParameter acc2IdOpParam = new MySqlParameter("@acc2_id", DBNull.Value);
+                MySqlParameter acc2IdOpParam = new MySqlParameter("@acc2_id", 0);
                 cmd.Parameters.Add(acc2IdOpParam);
             }
             else
@@ -181,10 +181,10 @@ namespace Bank_Accounting
                 MySqlParameter acc2IdOpParam = new MySqlParameter("@acc2_id", RecieverAccID);
                 cmd.Parameters.Add(acc2IdOpParam);
             }
-            
+            */
             //Параметры
-            
-           
+
+            MySqlParameter acc2IdOpParam = new MySqlParameter("@acc2_id", RecieverAccID);
             MySqlParameter typeOpParam = new MySqlParameter("@type", typeOp);
             MySqlParameter sumtransParam = new MySqlParameter("@sumoftransaction", sumoftransaction);
             MySqlParameter rateOpParam = new MySqlParameter("@rate", rate);
@@ -198,6 +198,7 @@ namespace Bank_Accounting
             cmd.Parameters.Add(rateOpParam);
             cmd.Parameters.Add(accIdOpParam);
             cmd.Parameters.Add(kindOpParam);
+            cmd.Parameters.Add(acc2IdOpParam);
             cmd.ExecuteReader();
             conn.Close();
         }

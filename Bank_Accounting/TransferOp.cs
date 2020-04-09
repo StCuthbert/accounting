@@ -166,10 +166,23 @@ namespace Bank_Accounting
             op.rate = Convert.ToDecimal(comboRate.Text);
             op.payment_kind = ComboPay.Text;
             op.typeOp = "перевод";
-            Operations.AccountID = Convert.ToInt32(AccID.Text);
-            Operations.RecieverAccID = Convert.ToInt32(RecieverAccID.Text);
+            try
+            {
+                Operations.AccountID = Convert.ToInt32(AccID.Text);
+                Operations.RecieverAccID = Convert.ToInt32(RecieverAccID.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Заполните карточку операции правильно!");
+                return;
+            }
             op.OpSave();
             this.Close();
+        }
+
+        private void TransferOp_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

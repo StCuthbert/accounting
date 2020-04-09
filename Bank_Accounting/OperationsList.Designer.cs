@@ -97,6 +97,9 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.NewOperation);
             this.Controls.Add(this.dataGridView1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "OperationsList";
             this.Text = "Операции";
             this.Load += new System.EventHandler(this.OperationsList_Load);

@@ -29,8 +29,7 @@ namespace Bank_Accounting
 
         private void button4_Click(object sender, EventArgs e)
         {
-            HistoryList a = new HistoryList();
-            a.ShowDialog();
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)

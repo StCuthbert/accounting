@@ -81,8 +81,16 @@ namespace Bank_Accounting
             op.rate = Convert.ToDecimal(comboRate.Text);
             op.typeOp = "снятие";
             op.payment_kind = " ";
-            Operations.AccountID = Convert.ToInt32(AccID.Text);
-
+            Operations.RecieverAccID = 0;
+            try
+            {
+                Operations.AccountID = Convert.ToInt32(AccID.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Заполните карточку операции правильно!");
+                return;
+            }
             op.OpSave();
             this.Close();
         }

@@ -79,6 +79,9 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.PaymentKind);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "PaymentElement";
             this.Text = "Добавить назначение платежа";
             this.Load += new System.EventHandler(this.PaymentElement_Load);

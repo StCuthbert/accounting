@@ -302,6 +302,9 @@
             this.Controls.Add(this.ClientName);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "EnrollElement";
             this.Text = "Карточка операции";
             this.Load += new System.EventHandler(this.EnrollElement_Load);

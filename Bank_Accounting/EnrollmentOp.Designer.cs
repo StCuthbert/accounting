@@ -285,6 +285,9 @@
             this.Controls.Add(this.SumOfTrans);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "EnrollmentOp";
             this.Text = "Зачисление средств на счет";
             this.Load += new System.EventHandler(this.EnrollmentOp_Load);

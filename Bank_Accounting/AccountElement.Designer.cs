@@ -179,6 +179,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Acc_number);
             this.Controls.Add(this.label2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "AccountElement";
             this.Text = "Добавление счета";
             this.Load += new System.EventHandler(this.AccountElement_Load);

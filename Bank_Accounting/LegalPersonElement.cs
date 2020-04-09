@@ -170,5 +170,12 @@ namespace Bank_Accounting
             acc.AccDelete();
             Rebuild();
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Account.AccRow = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            AccountView accview = new AccountView();
+            accview.ShowDialog();
+        }
     }
 }

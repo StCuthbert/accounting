@@ -390,8 +390,12 @@
             this.Controls.Add(this.SumOfTrans);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "TransferOp";
             this.Text = "Денежный перевод";
+            this.Load += new System.EventHandler(this.TransferOp_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System.Data;
+using System.Data.Common;
 
 namespace Bank_Accounting
 {
@@ -64,6 +65,47 @@ namespace Bank_Accounting
            
         }
 
+        public void AccFill()
+        {
+            MySqlConnection conn = DBUtils.GetDBConnection();
+            conn.Open();
+            string sql = "SELECT * FROM accounts WHERE id = @AccRow";
+            MySqlCommand cmd = new MySqlCommand(sql, conn);
+            MySqlParameter AccRowParam = new MySqlParameter("@AccRow", AccRow);
+            cmd.Parameters.Add(AccRowParam);
+
+
+            using (DbDataReader reader = cmd.ExecuteReader())
+            {
+                if (reader.HasRows)
+                {
+
+                    while (reader.Read())
+                    {
+
+                        id = Convert.ToString(reader.GetValue(0));
+                        acc_number = reader.GetString(1);
+                        bank_name = reader.GetString(2);
+                        BIK = reader.GetString(3);
+                        centralbank_corr = reader.GetString(4);
+                        kind = reader.GetString(5);
+                        currency = reader.GetString(6);
+                        balance = Convert.ToDecimal(reader.GetValue(7));
+
+
+
+
+
+
+                    }
+
+
+                }
+            }
+
+            conn.Close();
+        }
+        
         public void AccDelete()
         {
             MySqlConnection conn = DBUtils.GetDBConnection();

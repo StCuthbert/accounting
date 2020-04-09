@@ -109,6 +109,9 @@
             this.Controls.Add(this.radioButton3);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "OperationChoice";
             this.Text = "OperationChoice";
             this.Load += new System.EventHandler(this.OperationChoice_Load);

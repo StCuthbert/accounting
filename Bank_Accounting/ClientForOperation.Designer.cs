@@ -93,6 +93,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "ClientForOperation";
             this.Text = "Выбор клиента";
             this.Load += new System.EventHandler(this.ClientForOperation_Load);

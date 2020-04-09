@@ -96,6 +96,9 @@
             this.Controls.Add(this.CancelButt);
             this.Controls.Add(this.NextButton);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "ClientChoice";
             this.Text = "ClientChoice";
             this.Load += new System.EventHandler(this.ClientChoice_Load);

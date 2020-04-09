@@ -51,9 +51,10 @@ namespace Bank_Accounting
             ClientID.Text = client._userID;
             Physname.Text = client.name;
             PhysNation.Text = client.nationality;
-            BirthDate.Value = client.birth;
+            
             IdentityDoc.Text = client.document;
             SerialNum.Text = client.serial_num;
+            BirthDate.Value = client.birth;
             IssueDate.Value = client.date_of_issue;
             Issuing.Text = client.issuing;
             PhoneNumber.Text = client.phone_num;
@@ -82,8 +83,9 @@ namespace Bank_Accounting
 
         private void ClientElementPhys_Load(object sender, EventArgs e)
         {
-          
             
+            
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -148,8 +150,21 @@ namespace Bank_Accounting
            Account.AccRow = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
            Account acnt = new Account();
            acnt.AccDelete();
-       
+           Rebuild();
 
+
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Account.AccRow = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            AccountView accview = new AccountView();
+            accview.ShowDialog();
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }
