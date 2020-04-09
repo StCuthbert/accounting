@@ -84,6 +84,7 @@
             // 
             // Physname
             // 
+            this.Physname.Enabled = false;
             this.Physname.Location = new System.Drawing.Point(153, 40);
             this.Physname.Name = "Physname";
             this.Physname.Size = new System.Drawing.Size(635, 20);
@@ -100,6 +101,7 @@
             // 
             // BirthDate
             // 
+            this.BirthDate.Enabled = false;
             this.BirthDate.Location = new System.Drawing.Point(106, 82);
             this.BirthDate.Name = "BirthDate";
             this.BirthDate.Size = new System.Drawing.Size(158, 20);
@@ -116,6 +118,7 @@
             // 
             // IdentityDoc
             // 
+            this.IdentityDoc.Enabled = false;
             this.IdentityDoc.Location = new System.Drawing.Point(403, 82);
             this.IdentityDoc.Name = "IdentityDoc";
             this.IdentityDoc.Size = new System.Drawing.Size(385, 20);
@@ -132,6 +135,7 @@
             // 
             // SerialNum
             // 
+            this.SerialNum.Enabled = false;
             this.SerialNum.Location = new System.Drawing.Point(403, 122);
             this.SerialNum.Name = "SerialNum";
             this.SerialNum.Size = new System.Drawing.Size(385, 20);
@@ -148,6 +152,7 @@
             // 
             // IssueDate
             // 
+            this.IssueDate.Enabled = false;
             this.IssueDate.Location = new System.Drawing.Point(106, 122);
             this.IssueDate.Name = "IssueDate";
             this.IssueDate.Size = new System.Drawing.Size(158, 20);
@@ -164,6 +169,7 @@
             // 
             // Issuing
             // 
+            this.Issuing.Enabled = false;
             this.Issuing.Location = new System.Drawing.Point(114, 170);
             this.Issuing.Name = "Issuing";
             this.Issuing.Size = new System.Drawing.Size(674, 20);
@@ -189,6 +195,7 @@
             // 
             // PhoneNumber
             // 
+            this.PhoneNumber.Enabled = false;
             this.PhoneNumber.Location = new System.Drawing.Point(74, 211);
             this.PhoneNumber.Name = "PhoneNumber";
             this.PhoneNumber.Size = new System.Drawing.Size(331, 20);
@@ -196,6 +203,7 @@
             // 
             // Email
             // 
+            this.Email.Enabled = false;
             this.Email.Location = new System.Drawing.Point(468, 210);
             this.Email.Name = "Email";
             this.Email.Size = new System.Drawing.Size(320, 20);
@@ -212,6 +220,7 @@
             // 
             // INN
             // 
+            this.INN.Enabled = false;
             this.INN.Location = new System.Drawing.Point(74, 261);
             this.INN.Name = "INN";
             this.INN.Size = new System.Drawing.Size(331, 20);
@@ -237,6 +246,7 @@
             // 
             // KPP
             // 
+            this.KPP.Enabled = false;
             this.KPP.Location = new System.Drawing.Point(468, 261);
             this.KPP.Name = "KPP";
             this.KPP.Size = new System.Drawing.Size(320, 20);
@@ -253,6 +263,7 @@
             // 
             // AdditionalInfo
             // 
+            this.AdditionalInfo.Enabled = false;
             this.AdditionalInfo.Location = new System.Drawing.Point(15, 394);
             this.AdditionalInfo.Multiline = true;
             this.AdditionalInfo.Name = "AdditionalInfo";
@@ -290,6 +301,7 @@
             // 
             // ClientID
             // 
+            this.ClientID.Enabled = false;
             this.ClientID.Location = new System.Drawing.Point(697, 12);
             this.ClientID.Name = "ClientID";
             this.ClientID.Size = new System.Drawing.Size(90, 20);
@@ -315,6 +327,7 @@
             // 
             // RegAddr
             // 
+            this.RegAddr.Enabled = false;
             this.RegAddr.Location = new System.Drawing.Point(127, 308);
             this.RegAddr.Name = "RegAddr";
             this.RegAddr.Size = new System.Drawing.Size(661, 20);
@@ -328,6 +341,7 @@
             this.button3.TabIndex = 32;
             this.button3.Text = "Изменить";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // dataGridView1
             // 
@@ -352,6 +366,7 @@
             // 
             // PhysNation
             // 
+            this.PhysNation.Enabled = false;
             this.PhysNation.Location = new System.Drawing.Point(135, 349);
             this.PhysNation.Name = "PhysNation";
             this.PhysNation.Size = new System.Drawing.Size(190, 20);

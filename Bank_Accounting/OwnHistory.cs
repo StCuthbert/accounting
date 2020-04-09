@@ -69,5 +69,49 @@ namespace Bank_Accounting
             dataGridView1.Columns[8].HeaderText = "Счёт-получатель";
             dataGridView1.Columns[9].HeaderText = "Назначение";
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            switch (dataGridView1.CurrentRow.Cells[1].Value.ToString())
+            {
+                case "зачисление":
+
+                    Operations.OpId = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+                    EnrollElement enrEl = new EnrollElement();
+                    enrEl.ShowDialog();
+
+                    break;
+
+                case "снятие":
+
+                    Operations.OpId = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+                    WithdrawElement withEl = new WithdrawElement();
+                    withEl.ShowDialog();
+
+                    break;
+
+                case "перевод":
+
+                    Operations.OpId = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+                    TransferElement transel = new TransferElement();
+                    transel.ShowDialog();
+
+                    break;
+
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Rebuild();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Operations.OpId = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            Operations op = new Operations();
+            op.OpDel();
+            Rebuild();
+        }
     }
 }

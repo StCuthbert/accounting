@@ -85,6 +85,7 @@
             // 
             // LegalID
             // 
+            this.LegalID.Enabled = false;
             this.LegalID.Location = new System.Drawing.Point(688, 8);
             this.LegalID.Name = "LegalID";
             this.LegalID.Size = new System.Drawing.Size(100, 20);
@@ -110,6 +111,7 @@
             // 
             // FullName
             // 
+            this.FullName.Enabled = false;
             this.FullName.Location = new System.Drawing.Point(175, 36);
             this.FullName.Name = "FullName";
             this.FullName.Size = new System.Drawing.Size(613, 20);
@@ -126,6 +128,7 @@
             // 
             // LegalName
             // 
+            this.LegalName.Enabled = false;
             this.LegalName.Location = new System.Drawing.Point(175, 73);
             this.LegalName.Name = "LegalName";
             this.LegalName.Size = new System.Drawing.Size(613, 20);
@@ -142,6 +145,7 @@
             // 
             // OGRN
             // 
+            this.OGRN.Enabled = false;
             this.OGRN.Location = new System.Drawing.Point(456, 382);
             this.OGRN.Name = "OGRN";
             this.OGRN.Size = new System.Drawing.Size(328, 20);
@@ -158,6 +162,7 @@
             // 
             // Address
             // 
+            this.Address.Enabled = false;
             this.Address.Location = new System.Drawing.Point(143, 110);
             this.Address.Name = "Address";
             this.Address.Size = new System.Drawing.Size(645, 20);
@@ -174,6 +179,7 @@
             // 
             // INN
             // 
+            this.INN.Enabled = false;
             this.INN.Location = new System.Drawing.Point(48, 345);
             this.INN.Name = "INN";
             this.INN.Size = new System.Drawing.Size(300, 20);
@@ -190,6 +196,7 @@
             // 
             // KPP
             // 
+            this.KPP.Enabled = false;
             this.KPP.Location = new System.Drawing.Point(48, 423);
             this.KPP.Name = "KPP";
             this.KPP.Size = new System.Drawing.Size(300, 20);
@@ -206,6 +213,7 @@
             // 
             // OKPO
             // 
+            this.OKPO.Enabled = false;
             this.OKPO.Location = new System.Drawing.Point(48, 382);
             this.OKPO.Name = "OKPO";
             this.OKPO.Size = new System.Drawing.Size(300, 20);
@@ -222,6 +230,7 @@
             // 
             // OKVED
             // 
+            this.OKVED.Enabled = false;
             this.OKVED.Location = new System.Drawing.Point(456, 342);
             this.OKVED.Name = "OKVED";
             this.OKVED.Size = new System.Drawing.Size(328, 20);
@@ -238,6 +247,7 @@
             // 
             // Additional
             // 
+            this.Additional.Enabled = false;
             this.Additional.Location = new System.Drawing.Point(17, 513);
             this.Additional.Multiline = true;
             this.Additional.Name = "Additional";
@@ -284,6 +294,7 @@
             // 
             // Phone
             // 
+            this.Phone.Enabled = false;
             this.Phone.Location = new System.Drawing.Point(456, 454);
             this.Phone.Name = "Phone";
             this.Phone.Size = new System.Drawing.Size(330, 20);
@@ -291,6 +302,7 @@
             // 
             // Email
             // 
+            this.Email.Enabled = false;
             this.Email.Location = new System.Drawing.Point(48, 454);
             this.Email.Name = "Email";
             this.Email.Size = new System.Drawing.Size(300, 20);
@@ -316,6 +328,7 @@
             // 
             // Catcode
             // 
+            this.Catcode.Enabled = false;
             this.Catcode.Location = new System.Drawing.Point(456, 420);
             this.Catcode.Name = "Catcode";
             this.Catcode.Size = new System.Drawing.Size(328, 20);
@@ -329,6 +342,7 @@
             this.button3.TabIndex = 30;
             this.button3.Text = "Изменить";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // dataGridView1
             // 
@@ -352,6 +366,7 @@
             // 
             // PostAddr
             // 
+            this.PostAddr.Enabled = false;
             this.PostAddr.Location = new System.Drawing.Point(143, 136);
             this.PostAddr.Name = "PostAddr";
             this.PostAddr.Size = new System.Drawing.Size(645, 20);
@@ -360,7 +375,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(12, 199);
+            this.label16.Location = new System.Drawing.Point(14, 210);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(128, 13);
             this.label16.TabIndex = 34;
@@ -368,7 +383,8 @@
             // 
             // Director
             // 
-            this.Director.Location = new System.Drawing.Point(175, 192);
+            this.Director.Enabled = false;
+            this.Director.Location = new System.Drawing.Point(175, 206);
             this.Director.Name = "Director";
             this.Director.Size = new System.Drawing.Size(613, 20);
             this.Director.TabIndex = 35;
@@ -384,6 +400,7 @@
             // 
             // BankName
             // 
+            this.BankName.Enabled = false;
             this.BankName.Location = new System.Drawing.Point(175, 239);
             this.BankName.Name = "BankName";
             this.BankName.Size = new System.Drawing.Size(613, 20);
@@ -400,6 +417,7 @@
             // 
             // CB_corr
             // 
+            this.CB_corr.Enabled = false;
             this.CB_corr.Location = new System.Drawing.Point(161, 271);
             this.CB_corr.Name = "CB_corr";
             this.CB_corr.Size = new System.Drawing.Size(260, 20);
@@ -416,6 +434,7 @@
             // 
             // Acc
             // 
+            this.Acc.Enabled = false;
             this.Acc.Location = new System.Drawing.Point(528, 271);
             this.Acc.Name = "Acc";
             this.Acc.Size = new System.Drawing.Size(260, 20);
@@ -432,6 +451,7 @@
             // 
             // BankAddr
             // 
+            this.BankAddr.Enabled = false;
             this.BankAddr.Location = new System.Drawing.Point(143, 302);
             this.BankAddr.Name = "BankAddr";
             this.BankAddr.Size = new System.Drawing.Size(645, 20);
@@ -448,6 +468,7 @@
             // 
             // BIK
             // 
+            this.BIK.Enabled = false;
             this.BIK.Location = new System.Drawing.Point(52, 166);
             this.BIK.Name = "BIK";
             this.BIK.Size = new System.Drawing.Size(171, 20);
@@ -464,6 +485,7 @@
             // 
             // OKTMO
             // 
+            this.OKTMO.Enabled = false;
             this.OKTMO.Location = new System.Drawing.Point(319, 165);
             this.OKTMO.Name = "OKTMO";
             this.OKTMO.Size = new System.Drawing.Size(171, 20);
@@ -480,6 +502,7 @@
             // 
             // OKATO
             // 
+            this.OKATO.Enabled = false;
             this.OKATO.Location = new System.Drawing.Point(571, 165);
             this.OKATO.Name = "OKATO";
             this.OKATO.Size = new System.Drawing.Size(171, 20);

@@ -90,9 +90,7 @@ namespace Bank_Accounting
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Client clsv = new Client();
-            
-
+            Client clsv = new Client();        
             clsv.name = LegalName.Text;
             clsv.INN = INN.Text;
             clsv.KPP = KPP.Text;
@@ -114,22 +112,12 @@ namespace Bank_Accounting
             clsv.bank_addr = BankAddr.Text;
             clsv.director = Director.Text;
             clsv.post_addr = PostAddr.Text;
-
-
-            if (LegalID.Text == "")
-
-            {
-                clsv.LegalSave();
-            }
-
-            else
-
-            {
-
-                Client.FormId = Convert.ToInt32(LegalID.Text);
-                clsv.LegalUpdate();
+            clsv.LegalSave();
+            Client.FormId = Convert.ToInt32(LegalID.Text);
+            clsv.LegalUpdate();
+            this.Close();
                   
-            }
+            
         }
 
         private void LegalPersonElement_Load(object sender, EventArgs e)
@@ -176,6 +164,32 @@ namespace Bank_Accounting
             Account.AccRow = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
             AccountView accview = new AccountView();
             accview.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            
+            LegalName.Enabled = true;
+            INN.Enabled = true;
+            KPP.Enabled = true;
+            Phone.Enabled = true;
+            Email.Enabled = true;
+            Additional.Enabled = true;
+            Address.Enabled = true;
+            FullName.Enabled = true;
+            OKVED.Enabled = true;
+            OKPO.Enabled = true;
+            OGRN.Enabled = true;
+            OKATO.Enabled = true;
+            OKTMO.Enabled = true;
+            Catcode.Enabled = true;
+            CB_corr.Enabled = true;
+            Acc.Enabled = true;
+            BIK.Enabled = true;
+            BankName.Enabled = true;
+            BankAddr.Enabled = true;
+            Director.Enabled = true;
+            PostAddr.Enabled = true;
         }
     }
 }

@@ -26,13 +26,13 @@ namespace Bank_Accounting
         {
             if(physclient.Checked == true)
             {
-                ClientElementPhys clphys = new ClientElementPhys();
+                NewPhysClient clphys = new NewPhysClient();
                 clphys.ShowDialog();
                 this.Close();
             }
             else if(legalpers.Checked == true)
             {
-                LegalPersonElement cllegal = new LegalPersonElement();
+                NewLegalClient cllegal = new NewLegalClient();
                 cllegal.ShowDialog();
                 this.Close();
             }

@@ -126,6 +126,18 @@
     <Compile Include="LegalPersonElement.Designer.cs">
       <DependentUpon>LegalPersonElement.cs</DependentUpon>
     </Compile>
+    <Compile Include="NewLegalClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewLegalClient.Designer.cs">
+      <DependentUpon>NewLegalClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewPhysClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewPhysClient.Designer.cs">
+      <DependentUpon>NewPhysClient.cs</DependentUpon>
+    </Compile>
     <Compile Include="OperationChoice.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -231,6 +243,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LegalPersonElement.resx">
       <DependentUpon>LegalPersonElement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewLegalClient.resx">
+      <DependentUpon>NewLegalClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewPhysClient.resx">
+      <DependentUpon>NewPhysClient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OperationChoice.resx">
       <DependentUpon>OperationChoice.cs</DependentUpon>

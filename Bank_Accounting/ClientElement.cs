@@ -115,22 +115,12 @@ namespace Bank_Accounting
             client.serial_num = SerialNum.Text;
             client.date_of_issue = IssueDate.Value;
             client.issuing = Issuing.Text;
+            Client.FormId = Convert.ToInt32(ClientID.Text);
+            client.PhysUpdate();
+            this.Close();
             
-            
-            
-            
-            
-            
-            if (ClientID.Text == "")
-            {
-                client.PhysSave();
-            }
-            else
-            {
-                Client.FormId = Convert.ToInt32(ClientID.Text);
-                client.PhysUpdate();
                
-            }
+            
 
            
         }
@@ -166,6 +156,23 @@ namespace Bank_Accounting
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Physname.Enabled = true;
+            PhysNation.Enabled = true;
+            IdentityDoc.Enabled= true;
+            SerialNum.Enabled = true;
+            BirthDate.Enabled = true;
+            IssueDate.Enabled = true;
+            Issuing.Enabled = true;
+            PhoneNumber.Enabled = true;
+            Email.Enabled = true;
+            INN.Enabled = true;
+            KPP.Enabled = true;
+            RegAddr.Enabled = true;
+            AdditionalInfo.Enabled = true;
         }
     }
 }
