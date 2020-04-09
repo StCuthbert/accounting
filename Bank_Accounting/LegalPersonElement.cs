@@ -112,7 +112,6 @@ namespace Bank_Accounting
             clsv.bank_addr = BankAddr.Text;
             clsv.director = Director.Text;
             clsv.post_addr = PostAddr.Text;
-            clsv.LegalSave();
             Client.FormId = Convert.ToInt32(LegalID.Text);
             clsv.LegalUpdate();
             this.Close();
