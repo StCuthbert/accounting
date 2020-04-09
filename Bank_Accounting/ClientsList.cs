@@ -34,6 +34,14 @@ namespace Bank_Accounting
             this.dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.MultiSelect = false;
             dataGridView1.Columns[0].HeaderText = "ID";
+            dataGridView1.Columns[1].HeaderText = "Наименование";
+            dataGridView1.Columns[2].HeaderText = "ИНН";
+            dataGridView1.Columns[3].HeaderText = "КПП";
+            dataGridView1.Columns[4].HeaderText = "Телефон";
+            dataGridView1.Columns[5].HeaderText = "Email";
+            dataGridView1.Columns[6].HeaderText = "Дополнительно";
+            dataGridView1.Columns[7].HeaderText = "Адрес";
+            dataGridView1.Columns[8].HeaderText = "Тип";
 
 
 
