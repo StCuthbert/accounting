@@ -11,27 +11,27 @@ namespace Bank_Accounting
 {
     class Account
     {
-        static public string ClientName;
-        static public int ClientID;
-        static public int AccRow;
+        static public string ClientName { get; set; }
+        static public int ClientID { get; set; }
+        static public int AccRow { get; set; }
 
-        public string id;
+        public string id { get; set; }
         //Номер счета 20 знаков
-        public string acc_number;
+        public string acc_number { get; set; }
         //Наименование банка
-        public string bank_name;
+        public string bank_name { get; set; }
         //БИК 
-        public string BIK;
+        public string BIK { get; set; }
         //Корреспондентский счет Центрального Банка РФ
-        public string centralbank_corr;
+        public string centralbank_corr { get; set; }
         //Вид счета
-        public string kind;
+        public string kind { get; set; }
         //Валюта счета
-        public string currency;
+        public string currency { get; set; }
         //Баланс счета
-        public decimal balance;
+        public decimal balance { get; set; }
 
-      
+
 
         public void AccSave()
         {

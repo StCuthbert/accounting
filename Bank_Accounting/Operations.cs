@@ -12,33 +12,33 @@ namespace Bank_Accounting
 {
     class Operations
     {
-        static public string ClientName;
-        static public int ClientID;
-        static public string AccNumber;
-        static public int AccountID;
-        static public int RateId;
-        static public int PaymentId;
-        static public string AccCurrency;
-        static public string RecieverName;
-        static public int RecieverID;
-        static public string RecieverAcc;
-        static public int RecieverAccID;
-        static public int OpId;
+        static public string ClientName { get; set; }
+        static public int ClientID { get; set; }
+        static public string AccNumber { get; set; }
+        static public int AccountID { get; set; }
+        static public int RateId { get; set; }
+        static public int PaymentId { get; set; }
+        static public string AccCurrency { get; set; }
+        static public string RecieverName { get; set; }
+        static public int RecieverID { get; set; }
+        static public string RecieverAcc { get; set; }
+        static public int RecieverAccID { get; set; }
+        static public int OpId { get; set; }
 
-        public string HistoryID;
-        public DateTime transdate;
-        public string _sumoftransaction;
-        public string _rate;
-        public string _comission;
-        public string _totalsum;
+        public string HistoryID { get; set; }
+        public DateTime transdate { get; set; }
+        public string _sumoftransaction { get; set; }
+        public string _rate { get; set; }
+        public string _comission { get; set; }
+        public string _totalsum { get; set; }
 
-        public decimal sumoftransaction;
-        public decimal rate;
-        public decimal comission;
-        public decimal totalsum;
-        public decimal newrate;
-        public string payment_kind;
-        public string typeOp;
+        public decimal sumoftransaction { get; set; }
+        public decimal rate { get; set; }
+        public decimal comission { get; set; }
+        public decimal totalsum { get; set; }
+        public decimal newrate { get; set; }
+        public string payment_kind { get; set; }
+        public string typeOp { get; set; }
 
         public DataTable OperationListFill()
         {

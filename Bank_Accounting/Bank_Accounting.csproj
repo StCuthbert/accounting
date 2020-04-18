@@ -75,7 +75,6 @@
     <Compile Include="Bank_Operations.Designer.cs">
       <DependentUpon>Bank_Operations.cs</DependentUpon>
     </Compile>
-    <Compile Include="Calculations.cs" />
     <Compile Include="ClientChoice.cs">
       <SubType>Form</SubType>
     </Compile>

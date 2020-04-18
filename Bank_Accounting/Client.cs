@@ -13,51 +13,51 @@ namespace Bank_Accounting
     class Client
     {
         //Общие переменные
-        public string _userID;
-        public string name;
-        public string INN;
-        public string KPP;
-        public string phone_num;
-        public string email;
-        public string additional;
-        public string address;
+        public string _userID { get; set; }
+        public string name { get; set; }
+        public string INN { get; set; }
+        public string KPP { get; set; }
+        public string phone_num { get; set; }
+        public string email { get; set; }
+        public string additional { get; set; }
+        public string address { get; set; }
 
         //Переменные фмз лиц
 
-        public string nationality;
-        public DateTime birth;
-        public string document;
-        public string serial_num;
-        public DateTime date_of_issue;
-        public string issuing;
+        public string nationality { get; set; }
+        public DateTime birth { get; set; }
+        public string document { get; set; }
+        public string serial_num { get; set; }
+        public DateTime date_of_issue { get; set; }
+        public string issuing { get; set; }
 
         //Переменные юр. лиц
 
-        public string fullname;
-        public string okved;
-        public string okpo;
-        public string ogrn;
-        public string okato;
-        public string oktmo;
-        public string catcode;
-        public string cenral_corr;
-        public string acc;
-        public string BIK;
-        public string bank_name;
-        public string bank_addr;
-        public string director;
-        public string post_addr;
+        public string fullname { get; set; }
+        public string okved { get; set; }
+        public string okpo { get; set; }
+        public string ogrn { get; set; }
+        public string okato { get; set; }
+        public string oktmo { get; set; }
+        public string catcode { get; set; }
+        public string cenral_corr { get; set; }
+        public string acc { get; set; } 
+        public string BIK { get; set; }
+        public string bank_name { get; set; }
+        public string bank_addr { get; set; }
+        public string director { get; set; }
+        public string post_addr { get; set; }
 
         //Общие управляющие переменные
 
-        static public int RowId;
-        static public int FormId;
-        
-        static public string ClientType;
-        string clientID;
-   
+        static public int RowId { get; set; }
+        static public int FormId { get; set; }
 
-        
+        static public string ClientType { get; set; }
+        string clientID { get; set; }
+
+
+
         // Обновление информации физ. лица
 
         public DataTable ClientListFill()
