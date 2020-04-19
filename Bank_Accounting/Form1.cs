@@ -66,5 +66,11 @@ namespace Bank_Accounting
             CurrencyHandbook handbook = new CurrencyHandbook();
             handbook.ShowDialog();
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            AccKindsHandBooks handBooks = new AccKindsHandBooks();
+            handBooks.ShowDialog();
+        }
     }
 }

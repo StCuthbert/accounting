@@ -97,22 +97,8 @@ namespace Bank_Accounting
             accop.ShowDialog();
             this.AccNumber.Text = Operations.AccNumber;
             this.AccID.Text = Operations.AccountID.ToString();
-
-            switch (Operations.AccCurrency)
-            {
-
-                case "Российский рубль":
-                    this.currency_label.Text = "руб";
-                    break;
-
-                case "Доллар США":
-                    this.currency_label.Text = "USD";
-                    break;
-
-                case "Японская йена":
-                    this.currency_label.Text = "JPY";
-                    break;
-            }
+            this.currency_label.Text = AccCurrency.CurrAbbr;
+          
         }
 
         private void button6_Click(object sender, EventArgs e)

@@ -40,6 +40,16 @@ namespace Bank_Accounting
             view.RowFilter = string.Format("client =" + idFilter);
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = view;
+
+            dataGridView1.Columns[0].HeaderText = "ID";
+            dataGridView1.Columns[1].HeaderText = "Номер счёта";
+            dataGridView1.Columns[2].HeaderText = "Наименование банка";
+            dataGridView1.Columns[3].HeaderText = "БИК";
+            dataGridView1.Columns[4].HeaderText = "Корреспондентский счёт";
+            dataGridView1.Columns[5].HeaderText = "Вид счёта";
+            dataGridView1.Columns[6].HeaderText = "Валюта";
+            dataGridView1.Columns[7].HeaderText = "Баланс";
+            dataGridView1.Columns[8].HeaderText = "Клиент";
         }
 
         private void Initialize()
@@ -75,15 +85,7 @@ namespace Bank_Accounting
             dataGridView1.DataSource = view;
             var idFilter = ClientID.Text;
             view.RowFilter = string.Format("client =" + idFilter);
-        }
 
-        private void Surname_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ClientElementPhys_Load(object sender, EventArgs e)
-        {
             dataGridView1.Columns[0].HeaderText = "ID";
             dataGridView1.Columns[1].HeaderText = "Номер счёта";
             dataGridView1.Columns[2].HeaderText = "Наименование банка";
@@ -93,6 +95,16 @@ namespace Bank_Accounting
             dataGridView1.Columns[6].HeaderText = "Валюта";
             dataGridView1.Columns[7].HeaderText = "Баланс";
             dataGridView1.Columns[8].HeaderText = "Клиент";
+        }
+
+        private void Surname_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ClientElementPhys_Load(object sender, EventArgs e)
+        {
+           
 
 
         }

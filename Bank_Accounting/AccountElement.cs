@@ -12,11 +12,39 @@ namespace Bank_Accounting
 {
     public partial class AccountElement: Form
     {
+        DataTable data;
+        DataTable kind_data;
+
         Account account;
         public AccountElement()
         {
             InitializeComponent();
             account = new Account();
+            ComboCurrBuild();
+            ComboKindBuild();
+        }
+
+        private void ComboCurrBuild()
+        {
+            if (data == null)
+            {
+                data = new AccCurrency().comboCurrFill();
+            }
+
+            comboCurr.DataSource = null;
+            comboCurr.DataSource = data;
+            comboCurr.DisplayMember = "currency";
+        }
+
+        private void ComboKindBuild()
+        {
+            if (kind_data == null)
+            {
+                kind_data = new AccKinds().AccKindFill();            }
+
+            comboKind.DataSource = null;
+            comboKind.DataSource = kind_data;
+            comboKind.DisplayMember = "kind";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -32,8 +60,8 @@ namespace Bank_Accounting
             account.bank_name = Bank_name.Text;
             account.BIK = BIK.Text;
             account.centralbank_corr = Central_corr.Text;
-            account.kind = Kind.Text;
-            account.currency = Currency.Text;
+            account.kind = comboKind.Text;
+            account.currency = comboCurr.Text;
             account.AccSave();
             this.Close();
 

@@ -24,6 +24,8 @@ namespace Bank_Accounting
         static public int RecieverAccID { get; set; }
         static public int OpId { get; set; }
 
+        
+
         public string HistoryID { get; set; }
         public DateTime transdate { get; set; }
         public string _sumoftransaction { get; set; }

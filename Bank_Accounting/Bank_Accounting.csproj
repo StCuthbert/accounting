@@ -51,6 +51,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccCurrency.cs" />
+    <Compile Include="AccKindElement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccKindElement.Designer.cs">
+      <DependentUpon>AccKindElement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccKinds.cs" />
+    <Compile Include="AccKindsHandBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccKindsHandBooks.Designer.cs">
+      <DependentUpon>AccKindsHandBooks.cs</DependentUpon>
+    </Compile>
     <Compile Include="Account.cs" />
     <Compile Include="AccountElement.cs">
       <SubType>Form</SubType>
@@ -220,6 +233,12 @@
     <Compile Include="WithdrawOp.Designer.cs">
       <DependentUpon>WithdrawOp.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AccKindElement.resx">
+      <DependentUpon>AccKindElement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccKindsHandBooks.resx">
+      <DependentUpon>AccKindsHandBooks.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AccountElement.resx">
       <DependentUpon>AccountElement.cs</DependentUpon>
     </EmbeddedResource>

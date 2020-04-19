@@ -28,7 +28,7 @@ namespace Bank_Accounting
         private void button1_Click(object sender, EventArgs e)
         {
             acccurr.CurrencyName = CurrName.Text;
-            acccurr.CurrAbbr =  CurrAbbr.Text;
+            AccCurrency.CurrAbbr =  CurrAbbr.Text;
             acccurr.CurrencySave();
             this.Close(); 
         }

@@ -10,54 +10,44 @@ using System.Windows.Forms;
 
 namespace Bank_Accounting
 {
-    public partial class CurrencyHandbook : Form
+    public partial class AccKindsHandBooks : Form
     {
         DataTable data;
-        DataView view;
-        AccCurrency currency;
-        public CurrencyHandbook()
+        AccKinds acc_kind;
+        public AccKindsHandBooks()
         {
             InitializeComponent();
-            currency = new AccCurrency();
+            acc_kind = new AccKinds();
             Build();
         }
-       
+
         private void Build()
         {
-            
-            data = new AccCurrency().CurrencyFill();
-            view = new DataView(data);
+            data = acc_kind.AccKindFill();
             dataGridView1.DataSource = null;
-            dataGridView1.DataSource = view;
+            dataGridView1.DataSource = data;
             this.dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.MultiSelect = false;
             dataGridView1.Columns[0].HeaderText = "ID";
-            dataGridView1.Columns[1].HeaderText = "Валюта";
-            dataGridView1.Columns[2].HeaderText = "Сокращение";
+            dataGridView1.Columns[1].HeaderText = "Вид";
+          
         }
-
-        private void CurrencyHandbook_Load(object sender, EventArgs e)
+        private void AccKindsHandBooks_Load(object sender, EventArgs e)
         {
-     
-         
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            CurrencyElement element = new CurrencyElement();
+            AccKindElement element = new AccKindElement();
             element.ShowDialog();
             Build();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Build();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            AccCurrency.CurrId = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
-            currency.CurrencyDel();
+            AccKinds.KindId = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            acc_kind.KindDel();
             Build();
         }
     }

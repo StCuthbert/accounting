@@ -26,7 +26,7 @@ namespace Bank_Accounting
 
             if (data == null)
             {
-                data = new Account().AccountListFill();
+                data = new Account().AccountForOpFill();
                 view = new DataView(data);
             }
 
@@ -52,6 +52,9 @@ namespace Bank_Accounting
             dataGridView1.Columns[6].HeaderText = "Валюта";
             dataGridView1.Columns[7].HeaderText = "Баланс";
             dataGridView1.Columns[8].HeaderText = "Клиент";
+            dataGridView1.Columns[9].HeaderText = "ID";
+            dataGridView1.Columns[10].HeaderText = "Валюта по справочнику";
+            dataGridView1.Columns[11].HeaderText = "Сокращение";
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -64,6 +67,7 @@ namespace Bank_Accounting
             Operations.AccountID = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
             Operations.AccNumber = dataGridView1.CurrentRow.Cells[1].Value.ToString();
             Operations.AccCurrency = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+            AccCurrency.CurrAbbr = dataGridView1.CurrentRow.Cells[11].Value.ToString();
             this.Close();
         }
     }

@@ -11,8 +11,9 @@ namespace Bank_Accounting
     class AccCurrency
     {
         public string CurrencyName { get; set; }
-        public string CurrAbbr { get; set; }
-
+        static public string CurrAbbr { get; set; }
+        static public int CurrId { get; set; }
+        
         public void CurrencySave()
         {
             MySqlConnection conn = DBUtils.GetDBConnection();
@@ -29,11 +30,38 @@ namespace Bank_Accounting
 
 
         }
+
+        public void CurrencyDel()
+        {
+            MySqlConnection conn = DBUtils.GetDBConnection();
+            conn.Open();
+            string sql = "DELETE FROM currency WHERE id=@CurrId";
+            MySqlCommand cmd = new MySqlCommand(sql, conn);
+            MySqlParameter CurrIdParam = new MySqlParameter("@CurrId", CurrId);
+            cmd.Parameters.Add(CurrIdParam);
+            cmd.ExecuteReader();
+            conn.Close();
+
+
+
+        }
+
         public DataTable CurrencyFill()
         {
             MySqlConnection conn = DBUtils.GetDBConnection();
             conn.Open();
             string sql = "SELECT * FROM currency";
+            MySqlCommand cmd = new MySqlCommand(sql, conn);
+            var dt = new DataTable();
+            new MySqlDataAdapter(cmd).Fill(dt);
+            return dt;
+        }
+
+        public DataTable comboCurrFill()
+        {
+            MySqlConnection conn = DBUtils.GetDBConnection();
+            conn.Open();
+            string sql = "SELECT currency FROM currency";
             MySqlCommand cmd = new MySqlCommand(sql, conn);
             var dt = new DataTable();
             new MySqlDataAdapter(cmd).Fill(dt);
