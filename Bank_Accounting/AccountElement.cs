@@ -12,9 +12,11 @@ namespace Bank_Accounting
 {
     public partial class AccountElement: Form
     {
+        Account account;
         public AccountElement()
         {
             InitializeComponent();
+            account = new Account();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -24,7 +26,7 @@ namespace Bank_Accounting
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Account account = new Account();
+            
             
             account.acc_number = Acc_number.Text;
             account.bank_name = Bank_name.Text;

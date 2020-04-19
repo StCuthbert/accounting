@@ -60,5 +60,11 @@ namespace Bank_Accounting
             Bank_Operations bankop = new Bank_Operations();
             bankop.ShowDialog();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            CurrencyHandbook handbook = new CurrencyHandbook();
+            handbook.ShowDialog();
+        }
     }
 }

@@ -14,9 +14,11 @@ namespace Bank_Accounting
     {
         private DataTable data;
         private DataView view;
+        Client client;
         public ClientsList()
         {
             InitializeComponent();
+            client = new Client();
             Build();
         }
 
@@ -31,6 +33,17 @@ namespace Bank_Accounting
            
 
 
+          
+        }
+
+        private void Rebuild()
+        {
+
+            data = client.ClientListFill();
+            view = new DataView(data);
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = view;
+
             this.dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.MultiSelect = false;
             dataGridView1.Columns[0].HeaderText = "ID";
@@ -43,20 +56,6 @@ namespace Bank_Accounting
             dataGridView1.Columns[7].HeaderText = "Адрес";
             dataGridView1.Columns[8].HeaderText = "Тип";
 
-
-
-
-
-        }
-
-        private void Rebuild()
-        {
-
-            data = new Client().ClientListFill();
-            view = new DataView(data);
-            dataGridView1.DataSource = null;
-            dataGridView1.DataSource = view;
-
         }
 
         private void Build()
@@ -64,7 +63,7 @@ namespace Bank_Accounting
             
             if (data == null)
             {
-                data = new Client().ClientListFill();
+                data = client.ClientListFill();
                 view = new DataView(data);
             }
 
@@ -78,6 +77,17 @@ namespace Bank_Accounting
             //populate data to DGV
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = view;
+            this.dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.MultiSelect = false;
+            dataGridView1.Columns[0].HeaderText = "ID";
+            dataGridView1.Columns[1].HeaderText = "Наименование";
+            dataGridView1.Columns[2].HeaderText = "ИНН";
+            dataGridView1.Columns[3].HeaderText = "КПП";
+            dataGridView1.Columns[4].HeaderText = "Телефон";
+            dataGridView1.Columns[5].HeaderText = "Email";
+            dataGridView1.Columns[6].HeaderText = "Дополнительно";
+            dataGridView1.Columns[7].HeaderText = "Адрес";
+            dataGridView1.Columns[8].HeaderText = "Тип";
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -89,8 +99,8 @@ namespace Bank_Accounting
             if (Client.ClientType == "физическое")
             {   
                 
-                ClientElementPhys client = new ClientElementPhys();
-                client.ShowDialog();
+                ClientElementPhys cl = new ClientElementPhys();
+                cl.ShowDialog();
 
             }
 
@@ -129,7 +139,6 @@ namespace Bank_Accounting
         private void button3_Click(object sender, EventArgs e)
         {
             Client.RowId = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
-            Client client = new Client();
             client.ClientDel();
             Rebuild();
         }

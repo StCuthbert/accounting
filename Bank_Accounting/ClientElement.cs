@@ -15,10 +15,13 @@ namespace Bank_Accounting
     {
         private DataTable data;
         private DataView view;
-
+        Client client;
+        Account acnt;
         public ClientElementPhys()
         {
             InitializeComponent();
+            client = new Client();
+            acnt = new Account();
             Initialize();
             Build();
         }
@@ -44,9 +47,6 @@ namespace Bank_Accounting
             this.dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.MultiSelect = false;
       
-
-            Client client = new Client();
-
             client.PhysFill();
 
             ClientID.Text = client._userID;
@@ -109,8 +109,7 @@ namespace Bank_Accounting
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Client client = new Client();
-            
+           
             client.name = Physname.Text;
             client.INN = INN.Text;
             client.KPP = KPP.Text;
@@ -147,7 +146,6 @@ namespace Bank_Accounting
         private void button4_Click(object sender, EventArgs e)
         {
            Account.AccRow = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
-           Account acnt = new Account();
            acnt.AccDelete();
            Rebuild();
 

@@ -15,10 +15,11 @@ namespace Bank_Accounting
     {
         private DataTable data;
         private DataView view;
-
+        Client client;
         public LegalPersonElement()
         {
             InitializeComponent();
+            client = new Client();
             Initialize();
             Build();
         }
@@ -54,31 +55,31 @@ namespace Bank_Accounting
 
 
 
-            Client clsv = new Client();
-            clsv.LegalFill();
 
-            LegalID.Text = clsv._userID;
-            LegalName.Text = clsv.name;
-            INN.Text = clsv.INN;
-            KPP.Text = clsv.KPP;
-            Phone.Text = clsv.phone_num;
-            Email.Text = clsv.email;
-            Additional.Text = clsv.additional;
-            Address.Text = clsv.address;
-            FullName.Text = clsv.fullname;
-            OKVED.Text = clsv.okved;
-            OKPO.Text = clsv.okpo;
-            OGRN.Text = clsv.ogrn;
-            OKATO.Text = clsv.okato;
-            OKTMO.Text = clsv.oktmo;
-            Catcode.Text = clsv.catcode;
-            CB_corr.Text = clsv.cenral_corr;
-            Acc.Text = clsv.acc;
-            BIK.Text = clsv.BIK;
-            BankName.Text = clsv.bank_name;
-            BankAddr.Text = clsv.bank_addr;
-            Director.Text = clsv.director;
-            PostAddr.Text = clsv.post_addr;
+            client.LegalFill();
+
+            LegalID.Text = client._userID;
+            LegalName.Text = client.name;
+            INN.Text = client.INN;
+            KPP.Text = client.KPP;
+            Phone.Text = client.phone_num;
+            Email.Text = client.email;
+            Additional.Text = client.additional;
+            Address.Text = client.address;
+            FullName.Text = client.fullname;
+            OKVED.Text = client.okved;
+            OKPO.Text = client.okpo;
+            OGRN.Text = client.ogrn;
+            OKATO.Text = client.okato;
+            OKTMO.Text = client.oktmo;
+            Catcode.Text = client.catcode;
+            CB_corr.Text = client.cenral_corr;
+            Acc.Text = client.acc;
+            BIK.Text = client.BIK;
+            BankName.Text = client.bank_name;
+            BankAddr.Text = client.bank_addr;
+            Director.Text = client.director;
+            PostAddr.Text = client.post_addr;
             
         }
 
@@ -90,30 +91,30 @@ namespace Bank_Accounting
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Client clsv = new Client();        
-            clsv.name = LegalName.Text;
-            clsv.INN = INN.Text;
-            clsv.KPP = KPP.Text;
-            clsv.phone_num = Phone.Text;
-            clsv.email = Email.Text;
-            clsv.additional = Additional.Text;
-            clsv.address = Address.Text;
-            clsv.fullname = FullName.Text;
-            clsv.okved = OKVED.Text;
-            clsv.okpo = OKPO.Text;
-            clsv.ogrn = OGRN.Text;
-            clsv.okato = OKATO.Text;
-            clsv.oktmo = OKTMO.Text;
-            clsv.catcode = Catcode.Text;
-            clsv.cenral_corr = CB_corr.Text;
-            clsv.acc = Acc.Text;
-            clsv.BIK = BIK.Text;
-            clsv.bank_name = BankName.Text;
-            clsv.bank_addr = BankAddr.Text;
-            clsv.director = Director.Text;
-            clsv.post_addr = PostAddr.Text;
+
+            client.name = LegalName.Text;
+            client.INN = INN.Text;
+            client.KPP = KPP.Text;
+            client.phone_num = Phone.Text;
+            client.email = Email.Text;
+            client.additional = Additional.Text;
+            client.address = Address.Text;
+            client.fullname = FullName.Text;
+            client.okved = OKVED.Text;
+            client.okpo = OKPO.Text;
+            client.ogrn = OGRN.Text;
+            client.okato = OKATO.Text;
+            client.oktmo = OKTMO.Text;
+            client.catcode = Catcode.Text;
+            client.cenral_corr = CB_corr.Text;
+            client.acc = Acc.Text;
+            client.BIK = BIK.Text;
+            client.bank_name = BankName.Text;
+            client.bank_addr = BankAddr.Text;
+            client.director = Director.Text;
+            client.post_addr = PostAddr.Text;
             Client.FormId = Convert.ToInt32(LegalID.Text);
-            clsv.LegalUpdate();
+            client.LegalUpdate();
             this.Close();
                   
             

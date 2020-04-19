@@ -28,7 +28,10 @@ namespace Bank_Accounting
             view = new DataView(data);
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = view;
-
+            this.dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.MultiSelect = false;
+            dataGridView1.Columns[0].HeaderText = "ID";
+            dataGridView1.Columns[1].HeaderText = "Вид";
         }
         private void Build()
         {
@@ -43,6 +46,10 @@ namespace Bank_Accounting
             //populate data to DGV
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = view;
+            this.dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.MultiSelect = false;
+            dataGridView1.Columns[0].HeaderText = "ID";
+            dataGridView1.Columns[1].HeaderText = "Вид";
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -67,10 +74,12 @@ namespace Bank_Accounting
 
         private void PaymentPurposeList_Load(object sender, EventArgs e)
         {
-            this.dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.MultiSelect = false;
-            dataGridView1.Columns[0].HeaderText = "ID";
-            dataGridView1.Columns[1].HeaderText = "Вид";
+            
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
 
         }
     }

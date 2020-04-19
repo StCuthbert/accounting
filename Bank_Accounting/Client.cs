@@ -50,11 +50,11 @@ namespace Bank_Accounting
 
         //Общие управляющие переменные
 
-        static public int RowId { get; set; }
+        static  public int RowId { get; set; }
         static public int FormId { get; set; }
 
         static public string ClientType { get; set; }
-        string clientID { get; set; }
+        public string clientID { get; set; }
 
 
 

@@ -12,9 +12,12 @@ namespace Bank_Accounting
 {
     public partial class AccountView : Form
     {
+
+        Account acc;
         public AccountView()
         {
             InitializeComponent();
+            acc = new Account();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -24,7 +27,7 @@ namespace Bank_Accounting
 
         private void AccountView_Load(object sender, EventArgs e)
         {
-            Account acc = new Account();
+            
             acc.AccFill();
             AccID.Text = acc.id;
             Acc_number.Text = acc.acc_number;
