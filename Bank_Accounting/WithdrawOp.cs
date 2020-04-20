@@ -16,10 +16,12 @@ namespace Bank_Accounting
         private DataTable pay_data;
         private DataTable data;
         private DataView view;
+        Rates rates;
 
         public WithdrawOp()
         {
             InitializeComponent();
+            rates = new Rates();
             Build();
         }
 
@@ -28,7 +30,7 @@ namespace Bank_Accounting
 
             if (data == null)
             {
-                data = new Operations().comboRateFill();
+                data = rates.comboRateFill();
 
             }
 

@@ -14,10 +14,11 @@ namespace Bank_Accounting
     {
         private DataTable data;
         private DataView view;
-
+        AccountForOp accop;
         public AccountsForOperation()
         {
             InitializeComponent();
+            accop = new AccountForOp();
             Build();
         }
 
@@ -26,7 +27,7 @@ namespace Bank_Accounting
 
             if (data == null)
             {
-                data = new Account().AccountForOpFill();
+                data = accop.AccountForOpFill();
                 view = new DataView(data);
             }
 

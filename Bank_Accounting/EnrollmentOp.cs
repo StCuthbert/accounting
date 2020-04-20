@@ -15,10 +15,14 @@ namespace Bank_Accounting
         private DataTable pay_data;
         private DataTable data;
         private DataView view;
+        Rates rates;
+        Payments payment;
 
         public EnrollmentOp()
         {
             InitializeComponent();
+            rates = new Rates();
+            payment = new Payments();
             Build();
             ComboBuild();
           
@@ -30,7 +34,7 @@ namespace Bank_Accounting
 
             if (data == null)
             {
-                data = new Operations().comboRateFill();
+                data = rates.comboRateFill();
               
             }
 
@@ -44,7 +48,7 @@ namespace Bank_Accounting
         {
             if (pay_data == null)
             {
-                pay_data = new Operations().PaymentListFill();
+                pay_data = payment.PaymentListFill();
             }
 
             ComboPay.DataSource = null;

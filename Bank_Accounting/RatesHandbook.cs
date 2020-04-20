@@ -14,10 +14,12 @@ namespace Bank_Accounting
     {
         private DataTable data;
         private DataView view;
+        Rates rates;
 
         public RatesHandbook()
         {
             InitializeComponent();
+            rates = new Rates();
             Build();
         }
 
@@ -26,7 +28,7 @@ namespace Bank_Accounting
 
             if (data == null)
             {
-                data = new Operations().RatesListFill();
+                data = rates.RatesListFill();
                 view = new DataView(data);
             }
 
@@ -36,7 +38,7 @@ namespace Bank_Accounting
 
         private void Rebuild()
         {
-            data = new Operations().RatesListFill();
+            data = rates.RatesListFill();
             view = new DataView(data);
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = view;
@@ -66,9 +68,8 @@ namespace Bank_Accounting
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Operations.RateId = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
-            Operations op = new Operations();
-            op.RateDel();
+            Rates.RateId = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            rates.RateDel();
             Rebuild();
         }
     }

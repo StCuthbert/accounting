@@ -15,8 +15,8 @@ namespace Bank_Accounting
         static public int ClientID { get; set; }
         static public string AccNumber { get; set; }
         static public int AccountID { get; set; }
-        static public int RateId { get; set; }
-        static public int PaymentId { get; set; }
+   
+       
         static public string AccCurrency { get; set; }
         static public string RecieverName { get; set; }
         static public int RecieverID { get; set; }
@@ -37,7 +37,7 @@ namespace Bank_Accounting
         public decimal rate { get; set; }
         public decimal comission { get; set; }
         public decimal totalsum { get; set; }
-        public decimal newrate { get; set; }
+      
         public string payment_kind { get; set; }
         public string typeOp { get; set; }
 
@@ -52,116 +52,6 @@ namespace Bank_Accounting
             return dt;
         }
 
-        public DataTable PaymentListFill()
-        {
-            MySqlConnection conn = DBUtils.GetDBConnection();
-            conn.Open();
-            string sql = "SELECT * FROM payment_purpose";
-            MySqlCommand cmd = new MySqlCommand(sql, conn);
-            var dt = new DataTable();
-            new MySqlDataAdapter(cmd).Fill(dt);
-            return dt;
-        }
-
-        public DataTable comboRateFill()
-        {
-            MySqlConnection conn = DBUtils.GetDBConnection();
-            conn.Open();
-            string sql = "SELECT rate FROM rates";
-            MySqlCommand cmd = new MySqlCommand(sql, conn);
-            var dt = new DataTable();
-            new MySqlDataAdapter(cmd).Fill(dt);
-            return dt;
-        }
-
-
-
-        public DataTable RatesListFill()
-        {
-            MySqlConnection conn = DBUtils.GetDBConnection();
-            conn.Open();
-            string sql = "SELECT * FROM rates";
-            MySqlCommand cmd = new MySqlCommand(sql, conn);
-            var dt = new DataTable();
-            new MySqlDataAdapter(cmd).Fill(dt);
-            return dt;
-        }
-
-        public DataTable BankopListFill()
-        {
-            MySqlConnection conn = DBUtils.GetDBConnection();
-            conn.Open();
-            string sql = "SELECT * FROM bank_history";
-            MySqlCommand cmd = new MySqlCommand(sql, conn);
-            var dt = new DataTable();
-            new MySqlDataAdapter(cmd).Fill(dt);
-            return dt;
-        }
-
-        public void PaymentSave()
-        {
-            MySqlConnection conn = DBUtils.GetDBConnection();
-            conn.Open();
-
-            string sql = "INSERT INTO payment_purpose (id, kind)" +
-                "VALUES(null, @kind)";
-            MySqlCommand cmd = new MySqlCommand(sql, conn);
-
-            //Параметры
-            MySqlParameter paymentParam = new MySqlParameter("@kind", payment_kind);
-
-
-            cmd.Parameters.Add(paymentParam);
-            cmd.ExecuteReader();
-            conn.Close();
-        }
-
-        public void PaymentDel()
-        {
-            MySqlConnection conn = DBUtils.GetDBConnection();
-            conn.Open();
-            string sql = "DELETE FROM payment_purpose WHERE id= @PaymentId";
-            MySqlCommand cmd = new MySqlCommand(sql, conn);
-            MySqlParameter payidParam = new MySqlParameter("@PaymentID", PaymentId);
-            cmd.Parameters.Add(payidParam);
-            cmd.ExecuteReader();
-            conn.Close();
-            PaymentId = 0;
-        }
-
-        public void RateSave()
-        {
-
-            MySqlConnection conn = DBUtils.GetDBConnection();
-            conn.Open();
-
-            string sql = "INSERT INTO rates (id, rate)" +
-                "VALUES(null, @newrate)";
-            MySqlCommand cmd = new MySqlCommand(sql, conn);
-
-            //Параметры
-            MySqlParameter newrateParam = new MySqlParameter("@newrate", newrate);
-           
-
-            cmd.Parameters.Add(newrateParam);
-            cmd.ExecuteReader();
-            conn.Close();
-
-        }
-
-        public void RateDel()
-        {
-            MySqlConnection conn = DBUtils.GetDBConnection();
-            conn.Open();
-            string sql = "DELETE FROM rates WHERE id= @RateID";
-            MySqlCommand cmd = new MySqlCommand(sql, conn);
-            MySqlParameter rateidParam = new MySqlParameter("@RateID", RateId);
-            cmd.Parameters.Add(rateidParam);
-            cmd.ExecuteReader();
-            conn.Close();
-            RateId = 0;
-        }
-
         public void OpSave()
         {
             MySqlConnection conn = DBUtils.GetDBConnection();
@@ -171,18 +61,7 @@ namespace Bank_Accounting
                 "VALUES(null, @type, @sumoftransaction, @rate, null, null, now(), @acc1_id, @acc2_id, @kind)";
             MySqlCommand cmd = new MySqlCommand(sql, conn);
             
-            /*
-            if(RecieverAccID == 0)
-            {
-                MySqlParameter acc2IdOpParam = new MySqlParameter("@acc2_id", 0);
-                cmd.Parameters.Add(acc2IdOpParam);
-            }
-            else
-            {
-                MySqlParameter acc2IdOpParam = new MySqlParameter("@acc2_id", RecieverAccID);
-                cmd.Parameters.Add(acc2IdOpParam);
-            }
-            */
+       
             //Параметры
 
             MySqlParameter acc2IdOpParam = new MySqlParameter("@acc2_id", RecieverAccID);
@@ -224,11 +103,11 @@ namespace Bank_Accounting
             OpId = 0;
 
         }
+       
         public void OperationView()
         {
             comission = sumoftransaction / 100 * rate;
             totalsum = sumoftransaction - comission;
-            
         }
 
         public void OpElementFill()

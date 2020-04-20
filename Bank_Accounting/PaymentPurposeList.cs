@@ -14,17 +14,19 @@ namespace Bank_Accounting
     {
         private DataTable data;
         private DataView view;
+        Payments payment;
 
         public PaymentPurposeList()
         {
             InitializeComponent();
+            payment = new Payments();
             Build();
         }
 
         private void Rebuild()
         {
 
-            data = new Operations().PaymentListFill();
+            data = payment.PaymentListFill();
             view = new DataView(data);
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = view;
@@ -38,7 +40,7 @@ namespace Bank_Accounting
 
             if (data == null)
             {
-                data = new Operations().PaymentListFill();
+                data = payment.PaymentListFill();
                 view = new DataView(data);
             }
 
@@ -66,9 +68,9 @@ namespace Bank_Accounting
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Operations.PaymentId = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
-            Operations oper = new Operations();
-            oper.PaymentDel();
+            Payments.PaymentId = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            
+            payment.PaymentDel();
             Rebuild();
         }
 

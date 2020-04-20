@@ -15,17 +15,18 @@ namespace Bank_Accounting
 
         private DataTable data;
         private DataView view;
-
+        BankOperations bankop;
         public Bank_Operations()
         {
             InitializeComponent();
+            bankop = new BankOperations();
             Build();
         }
 
         private void Rebuild()
         {
 
-            data = new Operations().BankopListFill();
+            data = bankop.BankopListFill();
             view = new DataView(data);
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = view;
@@ -36,18 +37,10 @@ namespace Bank_Accounting
 
             if (data == null)
             {
-                data = new Operations().BankopListFill();
+                data = bankop.BankopListFill();
                 view = new DataView(data);
             }
-
-            /*build row filter
-            var nameFilter = CLNameFilter.Text;
-            if (string.IsNullOrEmpty(nameFilter))
-                view.RowFilter = "";
-            else
-                view.RowFilter = string.Format("Name LIKE '%{0}%'", nameFilter);
-                */
-            //populate data to DGV
+                        
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = view;
         }

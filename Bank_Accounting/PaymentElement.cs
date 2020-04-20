@@ -12,9 +12,11 @@ namespace Bank_Accounting
 {
     public partial class PaymentElement : Form
     {
+        Payments payment;
         public PaymentElement()
         {
             InitializeComponent();
+            payment = new Payments();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -24,9 +26,9 @@ namespace Bank_Accounting
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Operations oper = new Operations();
-            oper.payment_kind = PaymentKind.Text;
-            oper.PaymentSave();
+            
+            payment.paymentkind = PaymentKind.Text;
+            payment.PaymentSave();
             this.Close();
         }
 

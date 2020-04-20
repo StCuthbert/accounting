@@ -84,6 +84,7 @@
             this.MinimizeBox = false;
             this.Name = "RateAdd";
             this.Text = "Добавить процентную ставку";
+            this.Load += new System.EventHandler(this.RateAdd_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

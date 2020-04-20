@@ -24,10 +24,15 @@ namespace Bank_Accounting
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Operations op = new Operations();
+            Rates op = new Rates();
             op.newrate = Convert.ToDecimal(textBox1.Text);
             op.RateSave();
             this.Close();
+        }
+
+        private void RateAdd_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
