@@ -17,12 +17,14 @@ namespace Bank_Accounting
         private DataView view;
         Rates rates;
         Payments payment;
+        Enrollment op;
 
         public EnrollmentOp()
         {
             InitializeComponent();
             rates = new Rates();
             payment = new Payments();
+            op = new Enrollment();
             Build();
             ComboBuild();
           
@@ -97,7 +99,7 @@ namespace Bank_Accounting
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Operations op = new Operations();
+            
             op.sumoftransaction = Convert.ToDecimal(SumOfTrans.Text);
             op.rate = Convert.ToDecimal(comboRate.Text);
             op.payment_kind = ComboPay.Text;

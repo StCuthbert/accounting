@@ -32,8 +32,6 @@
             this.label14 = new System.Windows.Forms.Label();
             this.RegAddr = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.ClientID = new System.Windows.Forms.TextBox();
             this.PhysSaveButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.AdditionalInfo = new System.Windows.Forms.TextBox();
@@ -91,22 +89,6 @@
             this.label13.Size = new System.Drawing.Size(108, 13);
             this.label13.TabIndex = 66;
             this.label13.Text = "Адрес регистрации:";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(669, 17);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(21, 13);
-            this.label12.TabIndex = 65;
-            this.label12.Text = "ID:";
-            // 
-            // ClientID
-            // 
-            this.ClientID.Location = new System.Drawing.Point(696, 14);
-            this.ClientID.Name = "ClientID";
-            this.ClientID.Size = new System.Drawing.Size(90, 20);
-            this.ClientID.TabIndex = 64;
             // 
             // PhysSaveButton
             // 
@@ -314,8 +296,6 @@
             this.Controls.Add(this.label14);
             this.Controls.Add(this.RegAddr);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.ClientID);
             this.Controls.Add(this.PhysSaveButton);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.AdditionalInfo);
@@ -345,6 +325,7 @@
             this.MinimizeBox = false;
             this.Name = "NewPhysClient";
             this.Text = "Добавление нового клиента";
+            this.Load += new System.EventHandler(this.NewPhysClient_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -356,8 +337,6 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox RegAddr;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox ClientID;
         private System.Windows.Forms.Button PhysSaveButton;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox AdditionalInfo;

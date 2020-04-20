@@ -12,14 +12,16 @@ namespace Bank_Accounting
 {
     public partial class NewPhysClient : Form
     {
+        PhysClient client;
         public NewPhysClient()
         {
             InitializeComponent();
+            client = new PhysClient();
         }
 
         private void PhysSaveButton_Click(object sender, EventArgs e)
         {
-            Client client = new Client();
+           
 
             client.name = Physname.Text;
             client.INN = INN.Text;
@@ -34,13 +36,18 @@ namespace Bank_Accounting
             client.serial_num = SerialNum.Text;
             client.date_of_issue = IssueDate.Value;
             client.issuing = Issuing.Text;
-            client.PhysSave();
+            client.ClientSave();
             this.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void NewPhysClient_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

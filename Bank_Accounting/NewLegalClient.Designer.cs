@@ -72,8 +72,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.FullName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.LegalID = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // OKATO
@@ -433,22 +431,6 @@
             this.label2.TabIndex = 55;
             this.label2.Text = "Полное наименование:";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(661, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(21, 13);
-            this.label1.TabIndex = 54;
-            this.label1.Text = "ID:";
-            // 
-            // LegalID
-            // 
-            this.LegalID.Location = new System.Drawing.Point(688, 10);
-            this.LegalID.Name = "LegalID";
-            this.LegalID.Size = new System.Drawing.Size(100, 20);
-            this.LegalID.TabIndex = 53;
-            // 
             // NewLegalClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -498,13 +480,12 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.FullName);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.LegalID);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "NewLegalClient";
             this.Text = "Добавление нового клиента";
+            this.Load += new System.EventHandler(this.NewLegalClient_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -556,7 +537,5 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox FullName;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox LegalID;
     }
 }

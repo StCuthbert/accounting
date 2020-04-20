@@ -10,9 +10,10 @@ using System.Windows.Forms;
 
 namespace Bank_Accounting
 {
+     
     public partial class WithdrawOp : Form
     {
-
+        Withdraw op;
         private DataTable pay_data;
         private DataTable data;
         private DataView view;
@@ -22,6 +23,7 @@ namespace Bank_Accounting
         {
             InitializeComponent();
             rates = new Rates();
+            op = new Withdraw();
             Build();
         }
 
@@ -78,7 +80,7 @@ namespace Bank_Accounting
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Operations op = new Operations();
+             
             op.sumoftransaction = Convert.ToDecimal(SumOfTrans.Text);
             op.rate = Convert.ToDecimal(comboRate.Text);
             op.typeOp = "снятие";

@@ -15,12 +15,12 @@ namespace Bank_Accounting
     {
         private DataTable data;
         private DataView view;
-        Client client;
+        PhysClient client;
         Account acnt;
         public ClientElementPhys()
         {
             InitializeComponent();
-            client = new Client();
+            client = new PhysClient();
             acnt = new Account();
             Initialize();
             Build();
@@ -57,7 +57,7 @@ namespace Bank_Accounting
             this.dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.MultiSelect = false;
       
-            client.PhysFill();
+            client.ClientFill();
 
             ClientID.Text = client._userID;
             Physname.Text = client.name;
@@ -136,7 +136,7 @@ namespace Bank_Accounting
             client.date_of_issue = IssueDate.Value;
             client.issuing = Issuing.Text;
             Client.FormId = Convert.ToInt32(ClientID.Text);
-            client.PhysUpdate();
+            client.ClientUpdate();
             this.Close();
             
                

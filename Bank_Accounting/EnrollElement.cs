@@ -12,9 +12,11 @@ namespace Bank_Accounting
 {
     public partial class EnrollElement : Form
     {
+        Enrollment op;
         public EnrollElement()
         {
             InitializeComponent();
+            op = new Enrollment();
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -30,7 +32,7 @@ namespace Bank_Accounting
         private void EnrollElement_Load(object sender, EventArgs e)
         {
             this.DateOfTrans.CustomFormat = "dd.MM.yyyy HH:mm:ss";
-            Operations op = new Operations();
+            
             op.OpElementFill();
             ID.Text = op.HistoryID;
             ClientName.Text = Operations.ClientName;

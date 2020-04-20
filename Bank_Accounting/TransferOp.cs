@@ -18,12 +18,14 @@ namespace Bank_Accounting
         private DataView view;
         Rates rates;
         Payments payment;
+        Transfer op;
 
         public TransferOp()
         {
             InitializeComponent();
             rates = new Rates();
             payment = new Payments();
+            op = new Transfer();
             Build();
             ComboBuild();
         }
@@ -93,6 +95,9 @@ namespace Bank_Accounting
             this.ClientName.Text = Operations.ClientName;
             this.ClientID.Text = Operations.ClientID.ToString();
             this.button2.Enabled = true;
+            button5.Enabled = false;
+            this.RecieverAcc.Text = "";
+            this.RecieverAccID.Text = "";
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -151,7 +156,7 @@ namespace Bank_Accounting
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Operations op = new Operations();
+            
             op.sumoftransaction = Convert.ToDecimal(SumOfTrans.Text);
             op.rate = Convert.ToDecimal(comboRate.Text);
             op.payment_kind = ComboPay.Text;

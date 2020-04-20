@@ -12,16 +12,18 @@ namespace Bank_Accounting
 {
     public partial class WithdrawElement : Form
     {
+        Withdraw op;
         public WithdrawElement()
         {
             InitializeComponent();
+            op = new Withdraw();
         }
 
         private void WithdrawElement_Load(object sender, EventArgs e)
         {
             this.DateOfTrans.CustomFormat = "dd.MM.yyyy HH:mm:ss";
 
-            Operations op = new Operations();
+            
 
             op.OpElementFill();
 

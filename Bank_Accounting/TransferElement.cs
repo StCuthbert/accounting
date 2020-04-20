@@ -12,9 +12,11 @@ namespace Bank_Accounting
 {
     public partial class TransferElement : Form
     {
+        Transfer op;
         public TransferElement()
         {
             InitializeComponent();
+            op = new Transfer();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -24,7 +26,7 @@ namespace Bank_Accounting
 
         private void TransferElement_Load(object sender, EventArgs e)
         {
-            Operations op = new Operations();
+             
             op.typeOp = textBox1.Text;
 
             this.DateOfTrans.CustomFormat = "dd.MM.yyyy HH:mm:ss";

@@ -12,9 +12,11 @@ namespace Bank_Accounting
 {
     public partial class NewLegalClient : Form
     {
+        LegalClient clsv;
         public NewLegalClient()
         {
             InitializeComponent();
+            clsv = new LegalClient();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -24,7 +26,7 @@ namespace Bank_Accounting
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Client clsv = new Client();
+            
             clsv.name = LegalName.Text;
             clsv.INN = INN.Text;
             clsv.KPP = KPP.Text;
@@ -46,8 +48,13 @@ namespace Bank_Accounting
             clsv.bank_addr = BankAddr.Text;
             clsv.director = Director.Text;
             clsv.post_addr = PostAddr.Text;
-            clsv.LegalSave();
+            clsv.ClientSave();
             this.Close();
+        }
+
+        private void NewLegalClient_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

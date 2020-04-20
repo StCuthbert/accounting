@@ -15,11 +15,11 @@ namespace Bank_Accounting
     {
         private DataTable data;
         private DataView view;
-        Client client;
+        LegalClient client;
         public LegalPersonElement()
         {
             InitializeComponent();
-            client = new Client();
+            client = new LegalClient();
             Initialize();
             Build();
         }
@@ -76,7 +76,7 @@ namespace Bank_Accounting
 
 
 
-            client.LegalFill();
+            client.ClientFill();
 
             LegalID.Text = client._userID;
             LegalName.Text = client.name;
@@ -134,7 +134,7 @@ namespace Bank_Accounting
             client.director = Director.Text;
             client.post_addr = PostAddr.Text;
             Client.FormId = Convert.ToInt32(LegalID.Text);
-            client.LegalUpdate();
+            client.ClientUpdate();
             this.Close();
                   
             

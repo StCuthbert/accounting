@@ -135,6 +135,7 @@
     <Compile Include="EnrollElement.Designer.cs">
       <DependentUpon>EnrollElement.cs</DependentUpon>
     </Compile>
+    <Compile Include="Enrollment.cs" />
     <Compile Include="EnrollmentOp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +148,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="LegalClient.cs" />
     <Compile Include="LegalPersonElement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -197,6 +199,7 @@
       <DependentUpon>PaymentPurposeList.cs</DependentUpon>
     </Compile>
     <Compile Include="Payments.cs" />
+    <Compile Include="PhysClient.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Client.cs" />
@@ -213,6 +216,7 @@
     <Compile Include="RatesHandbook.Designer.cs">
       <DependentUpon>RatesHandbook.cs</DependentUpon>
     </Compile>
+    <Compile Include="Transfer.cs" />
     <Compile Include="TransferElement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -225,6 +229,7 @@
     <Compile Include="TransferOp.Designer.cs">
       <DependentUpon>TransferOp.cs</DependentUpon>
     </Compile>
+    <Compile Include="Withdraw.cs" />
     <Compile Include="WithdrawElement.cs">
       <SubType>Form</SubType>
     </Compile>
