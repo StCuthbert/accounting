@@ -11,9 +11,9 @@ namespace Bank_Accounting
 {
     class Account
     {
-        static public string ClientName { get; set; }
-        static public int ClientID { get; set; }
-        static public int AccRow { get; set; }
+       
+        public int ClientID { get; set; }
+        public int AccRow { get; set; }
 
         public string id { get; set; }
         //Номер счета 20 знаков

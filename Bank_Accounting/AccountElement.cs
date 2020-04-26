@@ -16,10 +16,11 @@ namespace Bank_Accounting
         DataTable kind_data;
 
         Account account;
-        public AccountElement()
+        public AccountElement(int ClID)
         {
             InitializeComponent();
             account = new Account();
+            account.ClientID = ClID;
             ComboCurrBuild();
             ComboKindBuild();
         }

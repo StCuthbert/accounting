@@ -17,13 +17,16 @@ namespace Bank_Accounting
         private DataView view;
         PhysClient client;
         Account acnt;
-        public ClientElementPhys()
+        
+        public ClientElementPhys(int rowid)
         {
             InitializeComponent();
             client = new PhysClient();
             acnt = new Account();
+            client.RowId = rowid;
             Initialize();
             Build();
+            
         }
 
         private void Build()
@@ -31,7 +34,7 @@ namespace Bank_Accounting
 
             if (data == null)
             {
-                data = new Account().AccountListFill();
+                data = acnt.AccountListFill();
                 view = new DataView(data);
             }
 
@@ -56,7 +59,8 @@ namespace Bank_Accounting
         {
             this.dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.MultiSelect = false;
-      
+
+            
             client.ClientFill();
 
             ClientID.Text = client._userID;
@@ -135,7 +139,7 @@ namespace Bank_Accounting
             client.serial_num = SerialNum.Text;
             client.date_of_issue = IssueDate.Value;
             client.issuing = Issuing.Text;
-            Client.FormId = Convert.ToInt32(ClientID.Text);
+            client.FormId = Convert.ToInt32(ClientID.Text);
             client.ClientUpdate();
             this.Close();
             
@@ -147,9 +151,8 @@ namespace Bank_Accounting
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            Account.ClientID = Convert.ToInt32(ClientID.Text);
-            Account.ClientName = Physname.Text;
-            AccountElement accel = new AccountElement();
+            
+            AccountElement accel = new AccountElement(Convert.ToInt32(ClientID.Text));
             accel.ShowDialog();
             Rebuild();
             
@@ -157,7 +160,7 @@ namespace Bank_Accounting
 
         private void button4_Click(object sender, EventArgs e)
         {
-           Account.AccRow = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+           acnt.AccRow = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
            acnt.AccDelete();
            Rebuild();
 
@@ -167,8 +170,8 @@ namespace Bank_Accounting
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Account.AccRow = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
-            AccountView accview = new AccountView();
+            
+            AccountView accview = new AccountView(Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value));
             accview.ShowDialog();
         }
 

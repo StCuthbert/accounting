@@ -66,19 +66,9 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.accountsBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
-            this.accountsBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.bankbaseDataSetCLAccBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.clientsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bankbaseDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.accountsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.basereforgedDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bankbaseDataSetCLAccBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bankbaseDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.basereforgedDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -451,11 +441,6 @@
             this.Load += new System.EventHandler(this.ClientElementPhys_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bankbaseDataSetCLAccBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bankbaseDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.basereforgedDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -493,8 +478,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox RegAddr;
         private System.Windows.Forms.Button button3;
-        
-        private System.Windows.Forms.BindingSource accountsBindingSource;
  
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
@@ -505,16 +488,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn kindDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn currencyDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn balanceDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource bankbaseDataSetBindingSource;
-       
-        private System.Windows.Forms.BindingSource clientsBindingSource;
        
         private System.Windows.Forms.BindingSource clientsBindingSource1;
         
         private System.Windows.Forms.BindingSource accountsBindingSource1;
-        
-        private System.Windows.Forms.BindingSource bankbaseDataSetCLAccBindingSource;
-        private System.Windows.Forms.BindingSource accountsBindingSource2;
         private System.Windows.Forms.BindingSource accountsBindingSource3;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox PhysNation;

@@ -16,12 +16,17 @@ namespace Bank_Accounting
         private DataTable data;
         private DataView view;
         LegalClient client;
-        public LegalPersonElement()
+        Account account;
+        
+        public LegalPersonElement(int rowid)
         {
             InitializeComponent();
             client = new LegalClient();
+            account = new Account();
+            client.RowId = rowid;
             Initialize();
             Build();
+            
         }
 
         private void Build()
@@ -29,7 +34,7 @@ namespace Bank_Accounting
 
             if (data == null)
             {
-                data = new Account().AccountListFill();
+                data = account.AccountListFill();
                 view = new DataView(data);
             }
             var idFilter = LegalID.Text;
@@ -50,7 +55,7 @@ namespace Bank_Accounting
 
         private void Rebuild()
         {
-            data = new Account().AccountListFill();
+            data = account.AccountListFill();
             view = new DataView(data);
             var idFilter = LegalID.Text;
             view.RowFilter = string.Format("client =" + idFilter);
@@ -75,7 +80,7 @@ namespace Bank_Accounting
 
 
 
-
+            
             client.ClientFill();
 
             LegalID.Text = client._userID;
@@ -133,7 +138,7 @@ namespace Bank_Accounting
             client.bank_addr = BankAddr.Text;
             client.director = Director.Text;
             client.post_addr = PostAddr.Text;
-            Client.FormId = Convert.ToInt32(LegalID.Text);
+            client.FormId = Convert.ToInt32(LegalID.Text);
             client.ClientUpdate();
             this.Close();
                   
@@ -148,9 +153,8 @@ namespace Bank_Accounting
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Account.ClientID = Convert.ToInt32(LegalID.Text);
-            Account.ClientName = LegalName.Text;
-            AccountElement accel = new AccountElement();
+           
+            AccountElement accel = new AccountElement(Convert.ToInt32(LegalID.Text));
             accel.ShowDialog();
             Rebuild();
             
@@ -158,7 +162,7 @@ namespace Bank_Accounting
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Account.AccRow = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            account.AccRow = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
             Account acnt = new Account();
             acnt.AccDelete();
             
@@ -166,15 +170,15 @@ namespace Bank_Accounting
 
         private void button6_Click(object sender, EventArgs e)
         {
-            Account acc = new Account();
-            acc.AccDelete();
+            
+            account.AccDelete();
             Rebuild();
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            Account.AccRow = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
-            AccountView accview = new AccountView();
+            
+            AccountView accview = new AccountView(Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value));
             accview.ShowDialog();
         }
 

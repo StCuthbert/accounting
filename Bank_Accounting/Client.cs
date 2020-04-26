@@ -10,7 +10,7 @@ using System.Data;
 
 namespace Bank_Accounting
 {
-    class Client
+    class Client : IClient
     {
         //Общие переменные
         public string _userID { get; set; }
@@ -25,10 +25,8 @@ namespace Bank_Accounting
 
         //Общие управляющие переменные
 
-        static  public int RowId { get; set; }
-        static public int FormId { get; set; }
-
-        static public string ClientType { get; set; }
+        public int RowId { get; set; }
+        public int FormId { get; set; }
         public string clientID { get; set; }
 
         

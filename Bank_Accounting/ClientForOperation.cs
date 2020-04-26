@@ -18,6 +18,7 @@ namespace Bank_Accounting
 
         public ClientForOperation()
         {
+
             InitializeComponent();
             Build();
         }

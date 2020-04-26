@@ -92,14 +92,16 @@ namespace Bank_Accounting
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Client.RowId = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
-            Client.ClientType = dataGridView1.CurrentRow.Cells[8].Value.ToString();
+            
+            //TODO
+            
+            string ClientType = dataGridView1.CurrentRow.Cells[8].Value.ToString();
 
 
-            if (Client.ClientType == "физическое")
+            if (ClientType == "физическое")
             {   
                 
-                ClientElementPhys cl = new ClientElementPhys();
+                ClientElementPhys cl = new ClientElementPhys(Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value));
                 cl.ShowDialog();
 
             }
@@ -107,7 +109,7 @@ namespace Bank_Accounting
             else
 
             {
-                LegalPersonElement legalcl = new LegalPersonElement();
+                LegalPersonElement legalcl = new LegalPersonElement(Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value));
                 legalcl.ShowDialog();
             }
 
@@ -138,7 +140,7 @@ namespace Bank_Accounting
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Client.RowId = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            client.RowId = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
             client.ClientDel();
             Rebuild();
         }

@@ -14,10 +14,11 @@ namespace Bank_Accounting
     {
 
         Account acc;
-        public AccountView()
+        public AccountView(int accrow)
         {
             InitializeComponent();
             acc = new Account();
+            acc.AccRow = accrow;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -60,8 +61,8 @@ namespace Bank_Accounting
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Account.AccRow = Convert.ToInt32(AccID.Text);
-            OwnHistory ownhist = new OwnHistory();
+            
+            OwnHistory ownhist = new OwnHistory(Convert.ToInt32(AccID.Text));
             ownhist.ShowDialog();
         }
     }

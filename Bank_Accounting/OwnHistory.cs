@@ -14,10 +14,12 @@ namespace Bank_Accounting
     {
         private DataTable data;
         private DataView view;
-
-        public OwnHistory()
+        Account account;
+        public OwnHistory(int accrow)
         {
             InitializeComponent();
+            account = new Account();
+            account.AccRow = accrow;
             Build();
         }
 
@@ -30,7 +32,7 @@ namespace Bank_Accounting
                 view = new DataView(data);
             }
 
-            var idFilter = Account.AccRow.ToString();
+            var idFilter = account.AccRow.ToString();
 
             List<string> list = new List<string>(2);
             list.Add("[acc1_id] = '" + idFilter + "'");
@@ -63,7 +65,7 @@ namespace Bank_Accounting
             data = new Operations().OperationListFill();
             view = new DataView(data);
 
-            var idFilter = Account.AccRow.ToString();
+            var idFilter = account.AccRow.ToString();
 
             List<string> list = new List<string>(2);
             list.Add("[acc1_id] = '" + idFilter + "'");
