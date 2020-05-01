@@ -11,18 +11,18 @@ namespace Bank_Accounting
 {
     class Operations
     {
-        static public string ClientName { get; set; }
-        static public int ClientID { get; set; }
-        static public string AccNumber { get; set; }
-        static public int AccountID { get; set; }
+        public string ClientName { get; set; }
+        public int ClientID { get; set; }
+        public string AccNumber { get; set; }
+        public int AccountID { get; set; }
    
        
-        static public string AccCurrency { get; set; }
-        static public string RecieverName { get; set; }
-        static public int RecieverID { get; set; }
-        static public string RecieverAcc { get; set; }
-        static public int RecieverAccID { get; set; }
-        static public int OpId { get; set; }
+      //  public string AccCurrency { get; set; }
+        public string RecieverName { get; set; }
+        public int RecieverID { get; set; }
+        public string RecieverAcc { get; set; }
+        public int RecieverAccID { get; set; }
+        public int OpId { get; set; }
 
         
 

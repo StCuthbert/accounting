@@ -93,7 +93,7 @@ namespace Bank_Accounting
         private void button2_Click(object sender, EventArgs e)
         {
             
-            //TODO
+            
             
             string ClientType = dataGridView1.CurrentRow.Cells[8].Value.ToString();
 

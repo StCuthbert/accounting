@@ -13,10 +13,11 @@ namespace Bank_Accounting
     public partial class WithdrawElement : Form
     {
         Withdraw op;
-        public WithdrawElement()
+        public WithdrawElement(int op_id)
         {
             InitializeComponent();
             op = new Withdraw();
+            op.OpId = op_id;
         }
 
         private void WithdrawElement_Load(object sender, EventArgs e)
@@ -28,10 +29,10 @@ namespace Bank_Accounting
             op.OpElementFill();
 
             ID.Text = op.HistoryID;
-            ClientName.Text = Operations.ClientName;
-            ClientID.Text = Operations.ClientID.ToString();
-            AccName.Text = Operations.AccNumber;
-            AccID.Text = Operations.AccountID.ToString();
+            ClientName.Text = op.ClientName;
+            ClientID.Text = op.ClientID.ToString();
+            AccName.Text = op.AccNumber;
+            AccID.Text = op.AccountID.ToString();
             SumOfTrans.Text = op._sumoftransaction;
             Rate.Text = op._rate;
             Comission.Text = op._comission;

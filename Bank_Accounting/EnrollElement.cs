@@ -13,10 +13,11 @@ namespace Bank_Accounting
     public partial class EnrollElement : Form
     {
         Enrollment op;
-        public EnrollElement()
+        public EnrollElement(int op_id)
         {
             InitializeComponent();
             op = new Enrollment();
+            op.OpId = op_id;
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -35,10 +36,10 @@ namespace Bank_Accounting
             
             op.OpElementFill();
             ID.Text = op.HistoryID;
-            ClientName.Text = Operations.ClientName;
-            ClientID.Text = Operations.ClientID.ToString();
-            AccName.Text = Operations.AccNumber;
-            AccID.Text = Operations.AccountID.ToString();
+            ClientName.Text = op.ClientName;
+            ClientID.Text = op.ClientID.ToString();
+            AccName.Text = op.AccNumber;
+            AccID.Text = op.AccountID.ToString();
             SumOfTrans.Text = op._sumoftransaction;
             Rate.Text = op._rate;
             Comission.Text = op._comission;

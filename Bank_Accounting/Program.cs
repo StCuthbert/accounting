@@ -9,7 +9,10 @@ using System.Windows.Forms;
 
 namespace Bank_Accounting
 {
-    static class Program
+    public delegate void ClientOpDelegate(string ClientName, string ClientID);
+    public delegate void AccountOpDelegate(string Account, string CurrAbbr, int AccID);
+    public delegate string ClientIdToAccount();
+       static class Program
     {
         /// <summary>
         /// Главная точка входа для приложения.
@@ -20,6 +23,7 @@ namespace Bank_Accounting
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
+
            
 
 
@@ -34,5 +38,7 @@ namespace Bank_Accounting
 
 
         }
+
+      
     }
 }

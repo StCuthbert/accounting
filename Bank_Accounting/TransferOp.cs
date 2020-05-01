@@ -15,10 +15,15 @@ namespace Bank_Accounting
 
         private DataTable pay_data;
         private DataTable data;
-        private DataView view;
+        
+        private string client_name;
+        private string client_id;
         Rates rates;
         Payments payment;
         Transfer op;
+        private string acc_number;
+        private string acc_id;
+        private string curr_abbr;
 
         public TransferOp()
         {
@@ -88,48 +93,75 @@ namespace Bank_Accounting
 
         private void button1_Click(object sender, EventArgs e)
         {
+            client_id = "";
+            client_name = "";
             this.AccNumber.Text = "";
             this.AccID.Text = "";
-            ClientForOperation clOp = new ClientForOperation();
+            ClientForOperation clOp = new ClientForOperation(new ClientOpDelegate(Clientfunc));
             clOp.ShowDialog();
-            this.ClientName.Text = Operations.ClientName;
-            this.ClientID.Text = Operations.ClientID.ToString();
+            this.ClientName.Text = client_name;
+            this.ClientID.Text = client_id;
             this.button2.Enabled = true;
             button5.Enabled = false;
             this.RecieverAcc.Text = "";
             this.RecieverAccID.Text = "";
         }
 
+        // функция для отправителя
+        void Clientfunc(string name_param, string id_param)
+        {
+            client_name = name_param;
+            client_id = id_param;
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
-            AccountsForOperation accop = new AccountsForOperation();
+            acc_number = "";
+            AccountsForOperation accop = new AccountsForOperation(new AccountOpDelegate(Accountfunc), new ClientIdToAccount(IdForAcc));
             accop.ShowDialog();
-            this.AccNumber.Text = Operations.AccNumber;
-            this.AccID.Text = Operations.AccountID.ToString();
-            this.currency_label.Text = AccCurrency.CurrAbbr;
+
+            this.AccNumber.Text = acc_number;
+            this.AccID.Text = acc_id;
+            this.currency_label.Text = curr_abbr;
           
+        }
+        void Accountfunc(string account, string currabbr, int accid)
+        {
+
+            acc_number = account;
+            acc_id = accid.ToString();
+            curr_abbr = currabbr;
+        }
+
+        string IdForAcc()
+        {
+            return client_id;
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
+            client_id = "";
+            client_name = "";
             this.RecieverAcc.Text = "";
             this.RecieverAccID.Text = "";
-            ClientForOperation clOp = new ClientForOperation();
+            ClientForOperation clOp = new ClientForOperation(new ClientOpDelegate(Clientfunc));
             clOp.ShowDialog();
-            this.RecieverName.Text = Operations.ClientName;
-            this.RecieverID.Text = Operations.ClientID.ToString();
+            this.RecieverName.Text = client_name;
+            this.RecieverID.Text = client_id;
             this.button5.Enabled = true;
             this.button2.Enabled = false;
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            AccountsForOperation accop = new AccountsForOperation();
+            acc_number = "";
+            AccountsForOperation accop = new AccountsForOperation(new AccountOpDelegate(Accountfunc), new ClientIdToAccount(IdForAcc));
             accop.ShowDialog();
-            this.RecieverAcc.Text = Operations.AccNumber;
-            this.RecieverAccID.Text = Operations.AccountID.ToString();
 
-      
+            this.RecieverAcc.Text = acc_number;
+            this.RecieverAccID.Text = acc_id;
+
+        
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -163,8 +195,8 @@ namespace Bank_Accounting
             op.typeOp = "перевод";
             try
             {
-                Operations.AccountID = Convert.ToInt32(AccID.Text);
-                Operations.RecieverAccID = Convert.ToInt32(RecieverAccID.Text);
+                op.AccountID = Convert.ToInt32(AccID.Text);
+                op.RecieverAccID = Convert.ToInt32(RecieverAccID.Text);
             }
             catch
             {

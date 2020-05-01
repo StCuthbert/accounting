@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Bank_Accounting
 {
     public partial class EnrollmentOp : Form
@@ -18,7 +19,7 @@ namespace Bank_Accounting
         Rates rates;
         Payments payment;
         Enrollment op;
-
+        public event AccountOpDelegate onChoice;
         public EnrollmentOp()
         {
             InitializeComponent();
@@ -104,10 +105,10 @@ namespace Bank_Accounting
             op.rate = Convert.ToDecimal(comboRate.Text);
             op.payment_kind = ComboPay.Text;
             op.typeOp = "зачисление";
-            Operations.RecieverAccID = 0;
+            op.RecieverAccID = 0;
             try
             {
-                Operations.AccountID = Convert.ToInt32(AccID.Text);
+                op.AccountID = Convert.ToInt32(AccID.Text);
             }
             catch
             {
@@ -122,25 +123,36 @@ namespace Bank_Accounting
         {
             this.AccNumber.Text = "";
             this.AccID.Text = "";
-            ClientForOperation clOp = new ClientForOperation();
+            ClientForOperation clOp = new ClientForOperation(new ClientOpDelegate(Clientfunc));
             clOp.ShowDialog();
-            this.ClientName.Text = Operations.ClientName;
-            this.ClientID.Text = Operations.ClientID.ToString();
             this.button2.Enabled = true;
+
             
+        }
+        void Clientfunc(string name_param, string id_param)
+        {
+            this.ClientName.Text = name_param;
+            this.ClientID.Text = id_param.ToString();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            AccountsForOperation accop = new AccountsForOperation();
+            AccountsForOperation accop = new AccountsForOperation(new AccountOpDelegate(Accountfunc), new ClientIdToAccount(IdForAcc));
             accop.ShowDialog();
-            this.AccNumber.Text = Operations.AccNumber;
-            this.AccID.Text = Operations.AccountID.ToString();
-            this.currency_label.Text = AccCurrency.CurrAbbr;
+                        
+        }
+        void Accountfunc(string account, string currabbr, int accid)
+        {
            
-            
+            this.AccNumber.Text = account;
+            this.AccID.Text = accid.ToString();
+            this.currency_label.Text = currabbr;
         }
         
+        string IdForAcc()
+        {
+            return this.ClientID.Text;
+        }
         private void EnrollmentOp_Load(object sender, EventArgs e)
         {
             

@@ -15,9 +15,11 @@ namespace Bank_Accounting
 
         private DataTable data;
         private DataView view;
+        Operations op;
         public OperationsList()
         {
             InitializeComponent();
+            op = new Operations();
             Build();
         }
 
@@ -88,8 +90,8 @@ namespace Bank_Accounting
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Operations.OpId = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
-            Operations op = new Operations();
+            op.OpId = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            
             op.OpDel();
             Rebuild();
         }
@@ -102,24 +104,24 @@ namespace Bank_Accounting
             {
                 case "зачисление":
 
-                    Operations.OpId = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
-                    EnrollElement enrEl = new EnrollElement();
+                   
+                    EnrollElement enrEl = new EnrollElement(Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value));
                     enrEl.ShowDialog();
 
                     break;
 
                 case "снятие":
 
-                    Operations.OpId = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
-                    WithdrawElement withEl = new WithdrawElement();
+                    
+                    WithdrawElement withEl = new WithdrawElement(Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value));
                     withEl.ShowDialog();
 
                     break;
 
                 case "перевод":
 
-                    Operations.OpId = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
-                    TransferElement transel = new TransferElement();
+                    
+                    TransferElement transel = new TransferElement(Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value));
                     transel.ShowDialog();
 
                     break;

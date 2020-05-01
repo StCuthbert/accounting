@@ -13,10 +13,11 @@ namespace Bank_Accounting
     public partial class TransferElement : Form
     {
         Transfer op;
-        public TransferElement()
+        public TransferElement(int op_id)
         {
             InitializeComponent();
             op = new Transfer();
+            op.OpId = op_id;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -33,20 +34,20 @@ namespace Bank_Accounting
             
             op.OpElementFill();
             ID.Text = op.HistoryID;
-            ClientName.Text = Operations.ClientName;
-            ClientID.Text = Operations.ClientID.ToString();
-            AccName.Text = Operations.AccNumber;
-            AccID.Text = Operations.AccountID.ToString();
+            ClientName.Text = op.ClientName;
+            ClientID.Text = op.ClientID.ToString();
+            AccName.Text = op.AccNumber;
+            AccID.Text = op.AccountID.ToString();
             SumOfTrans.Text = op._sumoftransaction;
             Rate.Text = op._rate;
             Comission.Text = op._comission;
             Totalsum.Text = op._totalsum;
             DateOfTrans.Value = op.transdate;
             PaymentPurpose.Text = op.payment_kind;
-            RecieverName.Text = Operations.RecieverName;
-            RecieverID.Text = Operations.RecieverID.ToString();
-            RecieverAcc.Text = Operations.RecieverAcc;
-            RecieverAccID.Text = Operations.RecieverAccID.ToString();
+            RecieverName.Text = op.RecieverName;
+            RecieverID.Text = op.RecieverID.ToString();
+            RecieverAcc.Text = op.RecieverAcc;
+            RecieverAccID.Text = op.RecieverAccID.ToString();
 
         }
     }

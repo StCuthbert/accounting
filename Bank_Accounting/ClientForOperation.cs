@@ -14,12 +14,15 @@ namespace Bank_Accounting
     {
         private DataTable data;
         private DataView view;
+        ClientOpDelegate client_op_delegate;
+        
         
 
-        public ClientForOperation()
+        public ClientForOperation(ClientOpDelegate sender)
         {
 
             InitializeComponent();
+            client_op_delegate = sender;
             Build();
         }
 
@@ -67,8 +70,8 @@ namespace Bank_Accounting
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Operations.ClientID = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
-            Operations.ClientName = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+           
+            client_op_delegate(dataGridView1.CurrentRow.Cells[1].Value.ToString(), dataGridView1.CurrentRow.Cells[0].Value.ToString());
             this.Close();
         }
     }

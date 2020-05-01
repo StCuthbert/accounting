@@ -14,10 +14,15 @@ namespace Bank_Accounting
     {
         private DataTable data;
         private DataView view;
+        AccountOpDelegate accdelegate;
         AccountForOp accop;
-        public AccountsForOperation()
+        string idFilter;
+        ClientIdToAccount client_id;
+        public AccountsForOperation(AccountOpDelegate sender, ClientIdToAccount clid)
         {
             InitializeComponent();
+            accdelegate = sender;
+            client_id = clid;
             accop = new AccountForOp();
             Build();
         }
@@ -31,7 +36,7 @@ namespace Bank_Accounting
                 view = new DataView(data);
             }
 
-            var idFilter = Operations.ClientID.ToString();
+            idFilter = client_id();
             view.RowFilter = string.Format("client =" + idFilter);
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = view;
@@ -65,10 +70,10 @@ namespace Bank_Accounting
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Operations.AccountID = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
-            Operations.AccNumber = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            Operations.AccCurrency = dataGridView1.CurrentRow.Cells[6].Value.ToString();
-            AccCurrency.CurrAbbr = dataGridView1.CurrentRow.Cells[11].Value.ToString();
+           // Operations.AccountID = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+          //  Operations.AccNumber = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+          //  AccCurrency.CurrAbbr = dataGridView1.CurrentRow.Cells[11].Value.ToString();
+            accdelegate(dataGridView1.CurrentRow.Cells[1].Value.ToString(), dataGridView1.CurrentRow.Cells[11].Value.ToString(), Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value));
             this.Close();
         }
     }
