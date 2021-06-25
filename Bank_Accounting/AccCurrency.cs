@@ -10,6 +10,9 @@ namespace Bank_Accounting
 {
     class AccCurrency
     {
+
+        // Справочник видов валют логика
+
         public string CurrencyName { get; set; }
         static public string CurrAbbr { get; set; }
         static public int CurrId { get; set; }

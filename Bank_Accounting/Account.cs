@@ -11,7 +11,7 @@ namespace Bank_Accounting
 {
     class Account
     {
-       
+        // Логика работы со счетами
         public int ClientID { get; set; }
         public int AccRow { get; set; }
 

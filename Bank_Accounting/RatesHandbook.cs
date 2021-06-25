@@ -20,10 +20,10 @@ namespace Bank_Accounting
         {
             InitializeComponent();
             rates = new Rates();
-            Build();
+            Rebuild();
         }
 
-        private void Build()
+      /*  private void Build()
         {
 
             if (data == null)
@@ -34,7 +34,13 @@ namespace Bank_Accounting
 
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = view;
+
+            this.dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.MultiSelect = false;
+            dataGridView1.Columns[0].HeaderText = "ID";
+            dataGridView1.Columns[1].HeaderText = "Процентная ставка";
         }
+      */
 
         private void Rebuild()
         {
@@ -42,6 +48,11 @@ namespace Bank_Accounting
             view = new DataView(data);
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = view;
+
+            this.dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.MultiSelect = false;
+            dataGridView1.Columns[0].HeaderText = "ID";
+            dataGridView1.Columns[1].HeaderText = "Процентная ставка";
         }
 
 
@@ -52,11 +63,7 @@ namespace Bank_Accounting
 
         private void RatesHandbook_Load(object sender, EventArgs e)
         {
-            this.dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.MultiSelect = false;
-            dataGridView1.Columns[0].HeaderText = "ID";
-            dataGridView1.Columns[1].HeaderText = "Процентная ставка";
-
+            
         }
 
         private void button1_Click(object sender, EventArgs e)

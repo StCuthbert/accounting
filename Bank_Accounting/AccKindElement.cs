@@ -12,6 +12,9 @@ namespace Bank_Accounting
 {
     public partial class AccKindElement : Form
     {
+
+       
+
         AccKinds kind;
         public AccKindElement()
         {
@@ -34,6 +37,11 @@ namespace Bank_Accounting
             kind.Kind = AccKindBox.Text;
             kind.KindSave();
             this.Close();
+        }
+
+        private void AccKindElement_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

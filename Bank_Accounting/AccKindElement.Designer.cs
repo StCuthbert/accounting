@@ -85,6 +85,7 @@
             this.MinimizeBox = false;
             this.Name = "AccKindElement";
             this.Text = "Добавить новый вид счёта";
+            this.Load += new System.EventHandler(this.AccKindElement_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

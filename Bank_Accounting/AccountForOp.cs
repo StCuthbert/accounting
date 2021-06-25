@@ -10,7 +10,7 @@ namespace Bank_Accounting
 {
     class AccountForOp
     {
-
+        //Логика выбора счета для операции
         public DataTable AccountForOpFill()
         {
             MySqlConnection conn = DBUtils.GetDBConnection();

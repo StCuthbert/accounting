@@ -10,6 +10,8 @@ namespace Bank_Accounting
 {
     class AccKinds
     {
+        //Справочник видов счетов логика
+
         public string Kind { get; set; }
         static public int KindId { get; set; }
         public DataTable AccKindFill()

@@ -70,11 +70,17 @@ namespace Bank_Accounting
 
         private void button1_Click(object sender, EventArgs e)
         {
-           // Operations.AccountID = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
-          //  Operations.AccNumber = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-          //  AccCurrency.CurrAbbr = dataGridView1.CurrentRow.Cells[11].Value.ToString();
-            accdelegate(dataGridView1.CurrentRow.Cells[1].Value.ToString(), dataGridView1.CurrentRow.Cells[11].Value.ToString(), Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value));
-            this.Close();
+            if (dataGridView1.RowCount > 0)
+            {
+                accdelegate(dataGridView1.CurrentRow.Cells[1].Value.ToString(), dataGridView1.CurrentRow.Cells[11].Value.ToString(), Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value));
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Отсутствуют счета для выбора!");
+            }
+                
+
         }
     }
 }

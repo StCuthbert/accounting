@@ -25,9 +25,17 @@ namespace Bank_Accounting
         private void button1_Click(object sender, EventArgs e)
         {
             Rates op = new Rates();
-            op.newrate = Convert.ToDecimal(textBox1.Text);
-            op.RateSave();
-            this.Close();
+            try
+            {
+                op.newrate = Convert.ToDecimal(textBox1.Text);
+                op.RateSave();
+                this.Close();
+            }
+            catch
+            {
+                MessageBox.Show("Введены некорректные данные!");
+            }
+            
         }
 
         private void RateAdd_Load(object sender, EventArgs e)

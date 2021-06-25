@@ -100,7 +100,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ClientChoice";
-            this.Text = "ClientChoice";
+            this.Text = "Выбор вида клиента";
             this.Load += new System.EventHandler(this.ClientChoice_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
